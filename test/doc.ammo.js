@@ -1,13 +1,9 @@
 var Ammo = {};
 /**
 	@constructor
-*/
-Ammo.btVector3 = function() {};
-/**
-	@constructor
-	@param x {Number}
-	@param y {Number}
-	@param z {Number}
+	@param {Number} [x]
+	@param {Number} [y]
+	@param {Number} [z]
 */
 Ammo.btVector3 = function(x, y, z) {};
 /**
@@ -40,24 +36,24 @@ Ammo.btVector3.prototype.z = function() {
 };
 /**
 	@function
-	@param x {Number}
+	@param {Number} x
 */
 Ammo.btVector3.prototype.setX = function(x) {};
 /**
 	@function
-	@param y {Number}
+	@param {Number} y
 */
 Ammo.btVector3.prototype.setY = function(y) {};
 /**
 	@function
-	@param z {Number}
+	@param {Number} z
 */
 Ammo.btVector3.prototype.setZ = function(z) {};
 /**
 	@function
-	@param x {Number}
-	@param y {Number}
-	@param z {Number}
+	@param {Number} x
+	@param {Number} y
+	@param {Number} z
 */
 Ammo.btVector3.prototype.setValue = function(x, y, z) {};
 /**
@@ -66,7 +62,7 @@ Ammo.btVector3.prototype.setValue = function(x, y, z) {};
 Ammo.btVector3.prototype.normalize = function() {};
 /**
 	@function
-	@param v {Ammo.btVector3}
+	@param {Ammo.btVector3} v
 	@return {Number}
 */
 Ammo.btVector3.prototype.dot = function(v) {
@@ -74,7 +70,7 @@ Ammo.btVector3.prototype.dot = function(v) {
 };
 /**
 	@function
-	@param x {Number}
+	@param {Number} x
 	@return {Ammo.btVector3}
 */
 Ammo.btVector3.prototype.op_mul = function(x) {
@@ -82,7 +78,7 @@ Ammo.btVector3.prototype.op_mul = function(x) {
 };
 /**
 	@function
-	@param v {Ammo.btVector3}
+	@param {Ammo.btVector3} v
 	@return {Ammo.btVector3}
 */
 Ammo.btVector3.prototype.op_add = function(v) {
@@ -90,7 +86,7 @@ Ammo.btVector3.prototype.op_add = function(v) {
 };
 /**
 	@function
-	@param v {Ammo.btVector3}
+	@param {Ammo.btVector3} v
 	@return {Ammo.btVector3}
 */
 Ammo.btVector3.prototype.op_sub = function(v) {
@@ -100,15 +96,10 @@ Ammo.btVector3.prototype.op_sub = function(v) {
 /**
 	@constructor
 	@implements Ammo.btVector3
-*/
-Ammo.btVector4 = function() {};
-/**
-	@constructor
-	@implements Ammo.btVector3
-	@param x {Number}
-	@param y {Number}
-	@param z {Number}
-	@param w {Number}
+	@param {Number} [x]
+	@param {Number} [y]
+	@param {Number} [z]
+	@param {Number} [w]
 */
 Ammo.btVector4 = function(x, y, z, w) {};
 /**
@@ -120,23 +111,18 @@ Ammo.btVector4.prototype.w = function() {
 };
 /**
 	@function
-	@param x {Number}
-	@param y {Number}
-	@param z {Number}
-	@param w {Number}
+	@param {Number} x
+	@param {Number} y
+	@param {Number} [z]
+	@param {Number} [w]
 */
 Ammo.btVector4.prototype.setValue = function(x, y, z, w) {};
 /**
 	@constructor
 	@implements Ammo.btVector3
-*/
-Ammo.btVector4 = function() {};
-/**
-	@constructor
-	@implements Ammo.btVector3
-	@param x {Number}
-	@param y {Number}
-	@param z {Number}
+	@param {Number} [x]
+	@param {Number} [y]
+	@param {Number} [z]
 */
 Ammo.btVector4 = function(x, y, z) {};
 /**
@@ -169,33 +155,29 @@ Ammo.btVector4.prototype.z = function() {
 };
 /**
 	@function
-	@param x {Number}
+	@param {Number} x
 */
 Ammo.btVector4.prototype.setX = function(x) {};
 /**
 	@function
-	@param y {Number}
+	@param {Number} y
 */
 Ammo.btVector4.prototype.setY = function(y) {};
 /**
 	@function
-	@param z {Number}
+	@param {Number} z
 */
 Ammo.btVector4.prototype.setZ = function(z) {};
 /**
 	@function
-	@param x {Number}
-	@param y {Number}
-	@param z {Number}
+	@param {Number} x
+	@param {Number} y
+	@param {Number} z
 */
 Ammo.btVector4.prototype.setValue = function(x, y, z) {};
 /**
 	@function
-*/
-Ammo.btVector4.prototype.normalize = function() {};
-/**
-	@function
-	@param v {Ammo.btVector3}
+	@param {Ammo.btVector3} v
 	@return {Number}
 */
 Ammo.btVector4.prototype.dot = function(v) {
@@ -203,7 +185,7 @@ Ammo.btVector4.prototype.dot = function(v) {
 };
 /**
 	@function
-	@param x {Number}
+	@param {Number} x
 	@return {Ammo.btVector3}
 */
 Ammo.btVector4.prototype.op_mul = function(x) {
@@ -211,7 +193,7 @@ Ammo.btVector4.prototype.op_mul = function(x) {
 };
 /**
 	@function
-	@param v {Ammo.btVector3}
+	@param {Ammo.btVector3} v
 	@return {Ammo.btVector3}
 */
 Ammo.btVector4.prototype.op_add = function(v) {
@@ -219,7 +201,7 @@ Ammo.btVector4.prototype.op_add = function(v) {
 };
 /**
 	@function
-	@param v {Ammo.btVector3}
+	@param {Ammo.btVector3} v
 	@return {Ammo.btVector3}
 */
 Ammo.btVector4.prototype.op_sub = function(v) {
@@ -256,47 +238,47 @@ Ammo.btQuadWord.prototype.w = function() {
 };
 /**
 	@function
-	@param x {Number}
+	@param {Number} x
 */
 Ammo.btQuadWord.prototype.setX = function(x) {};
 /**
 	@function
-	@param y {Number}
+	@param {Number} y
 */
 Ammo.btQuadWord.prototype.setY = function(y) {};
 /**
 	@function
-	@param z {Number}
+	@param {Number} z
 */
 Ammo.btQuadWord.prototype.setZ = function(z) {};
 /**
 	@function
-	@param w {Number}
+	@param {Number} w
 */
 Ammo.btQuadWord.prototype.setW = function(w) {};
 
 /**
 	@constructor
 	@implements Ammo.btQuadWord
-	@param x {Number}
-	@param y {Number}
-	@param z {Number}
-	@param w {Number}
+	@param {Number} x
+	@param {Number} y
+	@param {Number} z
+	@param {Number} w
 */
 Ammo.btQuaternion = function(x, y, z, w) {};
 /**
 	@function
-	@param x {Number}
-	@param y {Number}
-	@param z {Number}
-	@param w {Number}
+	@param {Number} x
+	@param {Number} y
+	@param {Number} z
+	@param {Number} w
 */
 Ammo.btQuaternion.prototype.setValue = function(x, y, z, w) {};
 /**
 	@function
-	@param z {Number}
-	@param y {Number}
-	@param x {Number}
+	@param {Number} z
+	@param {Number} y
+	@param {Number} x
 */
 Ammo.btQuaternion.prototype.setEulerZYX = function(z, y, x) {};
 /**
@@ -333,40 +315,40 @@ Ammo.btQuaternion.prototype.w = function() {
 };
 /**
 	@function
-	@param x {Number}
+	@param {Number} x
 */
 Ammo.btQuaternion.prototype.setX = function(x) {};
 /**
 	@function
-	@param y {Number}
+	@param {Number} y
 */
 Ammo.btQuaternion.prototype.setY = function(y) {};
 /**
 	@function
-	@param z {Number}
+	@param {Number} z
 */
 Ammo.btQuaternion.prototype.setZ = function(z) {};
 /**
 	@function
-	@param w {Number}
+	@param {Number} w
 */
 Ammo.btQuaternion.prototype.setW = function(w) {};
 
 /**
 	@function
-	@param ex {Number}
-	@param ey {Number}
-	@param ez {Number}
+	@param {Number} ex
+	@param {Number} ey
+	@param {Number} ez
 */
 Ammo.btMatrix3x3.prototype.setEulerZYX = function(ex, ey, ez) {};
 /**
 	@function
-	@param q {Ammo.btQuaternion}
+	@param {Ammo.btQuaternion} q
 */
 Ammo.btMatrix3x3.prototype.getRotation = function(q) {};
 /**
 	@function
-	@param y {Number}
+	@param {Number} y
 	@return {Ammo.btVector3}
 */
 Ammo.btMatrix3x3.prototype.getRow = function(y) {
@@ -375,12 +357,8 @@ Ammo.btMatrix3x3.prototype.getRow = function(y) {
 
 /**
 	@constructor
-*/
-Ammo.btTransform = function() {};
-/**
-	@constructor
-	@param q {Ammo.btQuaternion}
-	@param v {Ammo.btVector3}
+	@param {Ammo.btQuaternion} [q]
+	@param {Ammo.btVector3} [v]
 */
 Ammo.btTransform = function(q, v) {};
 /**
@@ -389,12 +367,12 @@ Ammo.btTransform = function(q, v) {};
 Ammo.btTransform.prototype.setIdentity = function() {};
 /**
 	@function
-	@param origin {Ammo.btVector3}
+	@param {Ammo.btVector3} origin
 */
 Ammo.btTransform.prototype.setOrigin = function(origin) {};
 /**
 	@function
-	@param rotation {Ammo.btQuaternion}
+	@param {Ammo.btQuaternion} rotation
 */
 Ammo.btTransform.prototype.setRotation = function(rotation) {};
 /**
@@ -420,26 +398,26 @@ Ammo.btTransform.prototype.getBasis = function() {
 };
 /**
 	@function
-	@param m {Array<Number>}
+	@param {Array<Number>} m
 */
 Ammo.btTransform.prototype.setFromOpenGLMatrix = function(m) {};
 
 /**
 	@function
-	@param worldTrans {Ammo.btTransform}
+	@param {Ammo.btTransform} worldTrans
 */
 Ammo.btMotionState.prototype.getWorldTransform = function(worldTrans) {};
 /**
 	@function
-	@param worldTrans {Ammo.btTransform}
+	@param {Ammo.btTransform} worldTrans
 */
 Ammo.btMotionState.prototype.setWorldTransform = function(worldTrans) {};
 
 /**
 	@constructor
 	@implements Ammo.btMotionState
-	@param [startTrans] {Ammo.btTransform}
-	@param [centerOfMassOffset] {Ammo.btTransform}
+	@param {Ammo.btTransform} [startTrans]
+	@param {Ammo.btTransform} [centerOfMassOffset]
 */
 Ammo.btDefaultMotionState = function(startTrans, centerOfMassOffset) {};
 /**
@@ -451,24 +429,24 @@ Ammo.btDefaultMotionState.prototype.get_m_graphicsWorldTrans = function() {
 };
 /**
 	@function
-	@param value {Ammo.btTransform}
+	@param {Ammo.btTransform} value
 */
 Ammo.btDefaultMotionState.prototype.set_m_graphicsWorldTrans = function(value) {};
 /**
 	@function
-	@param worldTrans {Ammo.btTransform}
+	@param {Ammo.btTransform} worldTrans
 */
 Ammo.btDefaultMotionState.prototype.getWorldTransform = function(worldTrans) {};
 /**
 	@function
-	@param worldTrans {Ammo.btTransform}
+	@param {Ammo.btTransform} worldTrans
 */
 Ammo.btDefaultMotionState.prototype.setWorldTransform = function(worldTrans) {};
 
 /**
 	@function
-	@param anisotropicFriction {Ammo.btVector3}
-	@param frictionMode {Number}
+	@param {Ammo.btVector3} anisotropicFriction
+	@param {Number} frictionMode
 */
 Ammo.btCollisionObject.prototype.setAnisotropicFriction = function(anisotropicFriction, frictionMode) {};
 /**
@@ -480,22 +458,22 @@ Ammo.btCollisionObject.prototype.getCollisionShape = function() {
 };
 /**
 	@function
-	@param contactProcessingThreshold {Number}
+	@param {Number} contactProcessingThreshold
 */
 Ammo.btCollisionObject.prototype.setContactProcessingThreshold = function(contactProcessingThreshold) {};
 /**
 	@function
-	@param newState {Number}
+	@param {Number} newState
 */
 Ammo.btCollisionObject.prototype.setActivationState = function(newState) {};
 /**
 	@function
-	@param newState {Number}
+	@param {Number} newState
 */
 Ammo.btCollisionObject.prototype.forceActivationState = function(newState) {};
 /**
 	@function
-	@param [forceActivation] {Boolean}
+	@param {Boolean} [forceActivation]
 */
 Ammo.btCollisionObject.prototype.activate = function(forceActivation) {};
 /**
@@ -514,17 +492,17 @@ Ammo.btCollisionObject.prototype.isKinematicObject = function() {
 };
 /**
 	@function
-	@param rest {Number}
+	@param {Number} rest
 */
 Ammo.btCollisionObject.prototype.setRestitution = function(rest) {};
 /**
 	@function
-	@param frict {Number}
+	@param {Number} frict
 */
 Ammo.btCollisionObject.prototype.setFriction = function(frict) {};
 /**
 	@function
-	@param frict {Number}
+	@param {Number} frict
 */
 Ammo.btCollisionObject.prototype.setRollingFriction = function(frict) {};
 /**
@@ -543,27 +521,27 @@ Ammo.btCollisionObject.prototype.getCollisionFlags = function() {
 };
 /**
 	@function
-	@param flags {Number}
+	@param {Number} flags
 */
 Ammo.btCollisionObject.prototype.setCollisionFlags = function(flags) {};
 /**
 	@function
-	@param worldTrans {Ammo.btTransform}
+	@param {Ammo.btTransform} worldTrans
 */
 Ammo.btCollisionObject.prototype.setWorldTransform = function(worldTrans) {};
 /**
 	@function
-	@param collisionShape {Ammo.btCollisionShape}
+	@param {Ammo.btCollisionShape} collisionShape
 */
 Ammo.btCollisionObject.prototype.setCollisionShape = function(collisionShape) {};
 /**
 	@function
-	@param ccdMotionThreshold {Number}
+	@param {Number} ccdMotionThreshold
 */
 Ammo.btCollisionObject.prototype.setCcdMotionThreshold = function(ccdMotionThreshold) {};
 /**
 	@function
-	@param radius {Number}
+	@param {Number} radius
 */
 Ammo.btCollisionObject.prototype.setCcdSweptSphereRadius = function(radius) {};
 /**
@@ -575,7 +553,7 @@ Ammo.btCollisionObject.prototype.getUserIndex = function() {
 };
 /**
 	@function
-	@param index {Number}
+	@param {Number} index
 */
 Ammo.btCollisionObject.prototype.setUserIndex = function(index) {};
 /**
@@ -587,7 +565,7 @@ Ammo.btCollisionObject.prototype.getUserPointer = function() {
 };
 /**
 	@function
-	@param userPointer {*}
+	@param {*} userPointer
 */
 Ammo.btCollisionObject.prototype.setUserPointer = function(userPointer) {};
 
@@ -608,7 +586,7 @@ Ammo.RayResultCallback.prototype.get_m_collisionFilterGroup = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.RayResultCallback.prototype.set_m_collisionFilterGroup = function(value) {};
 /**
@@ -620,7 +598,7 @@ Ammo.RayResultCallback.prototype.get_m_collisionFilterMask = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.RayResultCallback.prototype.set_m_collisionFilterMask = function(value) {};
 /**
@@ -632,15 +610,15 @@ Ammo.RayResultCallback.prototype.get_m_collisionObject = function() {
 };
 /**
 	@function
-	@param value {Ammo.btCollisionObject}
+	@param {Ammo.btCollisionObject} value
 */
 Ammo.RayResultCallback.prototype.set_m_collisionObject = function(value) {};
 
 /**
 	@constructor
 	@implements Ammo.RayResultCallback
-	@param from {Ammo.btVector3}
-	@param to {Ammo.btVector3}
+	@param {Ammo.btVector3} from
+	@param {Ammo.btVector3} to
 */
 Ammo.ClosestRayResultCallback = function(from, to) {};
 /**
@@ -652,7 +630,7 @@ Ammo.ClosestRayResultCallback.prototype.get_m_rayFromWorld = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.ClosestRayResultCallback.prototype.set_m_rayFromWorld = function(value) {};
 /**
@@ -664,7 +642,7 @@ Ammo.ClosestRayResultCallback.prototype.get_m_rayToWorld = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.ClosestRayResultCallback.prototype.set_m_rayToWorld = function(value) {};
 /**
@@ -676,7 +654,7 @@ Ammo.ClosestRayResultCallback.prototype.get_m_hitNormalWorld = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.ClosestRayResultCallback.prototype.set_m_hitNormalWorld = function(value) {};
 /**
@@ -688,7 +666,7 @@ Ammo.ClosestRayResultCallback.prototype.get_m_hitPointWorld = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.ClosestRayResultCallback.prototype.set_m_hitPointWorld = function(value) {};
 /**
@@ -707,7 +685,7 @@ Ammo.ClosestRayResultCallback.prototype.get_m_collisionFilterGroup = function() 
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.ClosestRayResultCallback.prototype.set_m_collisionFilterGroup = function(value) {};
 /**
@@ -719,7 +697,7 @@ Ammo.ClosestRayResultCallback.prototype.get_m_collisionFilterMask = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.ClosestRayResultCallback.prototype.set_m_collisionFilterMask = function(value) {};
 /**
@@ -731,7 +709,7 @@ Ammo.ClosestRayResultCallback.prototype.get_m_collisionObject = function() {
 };
 /**
 	@function
-	@param value {Ammo.btCollisionObject}
+	@param {Ammo.btCollisionObject} value
 */
 Ammo.ClosestRayResultCallback.prototype.set_m_collisionObject = function(value) {};
 
@@ -772,7 +750,7 @@ Ammo.btManifoldPoint.prototype.get_m_localPointA = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.btManifoldPoint.prototype.set_m_localPointA = function(value) {};
 /**
@@ -784,7 +762,7 @@ Ammo.btManifoldPoint.prototype.get_m_localPointB = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.btManifoldPoint.prototype.set_m_localPointB = function(value) {};
 /**
@@ -796,7 +774,7 @@ Ammo.btManifoldPoint.prototype.get_m_positionWorldOnB = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.btManifoldPoint.prototype.set_m_positionWorldOnB = function(value) {};
 /**
@@ -808,7 +786,7 @@ Ammo.btManifoldPoint.prototype.get_m_positionWorldOnA = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.btManifoldPoint.prototype.set_m_positionWorldOnA = function(value) {};
 /**
@@ -820,19 +798,19 @@ Ammo.btManifoldPoint.prototype.get_m_normalWorldOnB = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.btManifoldPoint.prototype.set_m_normalWorldOnB = function(value) {};
 
 /**
 	@function
-	@param cp {Ammo.btManifoldPoint}
-	@param colObj0Wrap {Ammo.btCollisionObjectWrapper}
-	@param partId0 {Number}
-	@param index0 {Number}
-	@param colObj1Wrap {Ammo.btCollisionObjectWrapper}
-	@param partId1 {Number}
-	@param index1 {Number}
+	@param {Ammo.btManifoldPoint} cp
+	@param {Ammo.btCollisionObjectWrapper} colObj0Wrap
+	@param {Number} partId0
+	@param {Number} index0
+	@param {Ammo.btCollisionObjectWrapper} colObj1Wrap
+	@param {Number} partId1
+	@param {Number} index1
 	@return {Number}
 */
 Ammo.ContactResultCallback.prototype.addSingleResult = function(cp, colObj0Wrap, partId0, index0, colObj1Wrap, partId1, index1) {
@@ -845,13 +823,13 @@ Ammo.ContactResultCallback.prototype.addSingleResult = function(cp, colObj0Wrap,
 Ammo.ConcreteContactResultCallback = function() {};
 /**
 	@function
-	@param cp {Ammo.btManifoldPoint}
-	@param colObj0Wrap {Ammo.btCollisionObjectWrapper}
-	@param partId0 {Number}
-	@param index0 {Number}
-	@param colObj1Wrap {Ammo.btCollisionObjectWrapper}
-	@param partId1 {Number}
-	@param index1 {Number}
+	@param {Ammo.btManifoldPoint} cp
+	@param {Ammo.btCollisionObjectWrapper} colObj0Wrap
+	@param {Number} partId0
+	@param {Number} index0
+	@param {Ammo.btCollisionObjectWrapper} colObj1Wrap
+	@param {Number} partId1
+	@param {Number} index1
 	@return {Number}
 */
 Ammo.ConcreteContactResultCallback.prototype.addSingleResult = function(cp, colObj0Wrap, partId0, index0, colObj1Wrap, partId1, index1) {
@@ -867,7 +845,7 @@ Ammo.LocalShapeInfo.prototype.get_m_shapePart = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.LocalShapeInfo.prototype.set_m_shapePart = function(value) {};
 /**
@@ -879,17 +857,17 @@ Ammo.LocalShapeInfo.prototype.get_m_triangleIndex = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.LocalShapeInfo.prototype.set_m_triangleIndex = function(value) {};
 
 /**
 	@constructor
-	@param hitCollisionObject {Ammo.btCollisionObject}
-	@param localShapeInfo {Ammo.LocalShapeInfo}
-	@param hitNormalLocal {Ammo.btVector3}
-	@param hitPointLocal {Ammo.btVector3}
-	@param hitFraction {Number}
+	@param {Ammo.btCollisionObject} hitCollisionObject
+	@param {Ammo.LocalShapeInfo} localShapeInfo
+	@param {Ammo.btVector3} hitNormalLocal
+	@param {Ammo.btVector3} hitPointLocal
+	@param {Number} hitFraction
 */
 Ammo.LocalConvexResult = function(hitCollisionObject, localShapeInfo, hitNormalLocal, hitPointLocal, hitFraction) {};
 /**
@@ -901,7 +879,7 @@ Ammo.LocalConvexResult.prototype.get_m_hitCollisionObject = function() {
 };
 /**
 	@function
-	@param value {Ammo.btCollisionObject}
+	@param {Ammo.btCollisionObject} value
 */
 Ammo.LocalConvexResult.prototype.set_m_hitCollisionObject = function(value) {};
 /**
@@ -913,7 +891,7 @@ Ammo.LocalConvexResult.prototype.get_m_localShapeInfo = function() {
 };
 /**
 	@function
-	@param value {Ammo.LocalShapeInfo}
+	@param {Ammo.LocalShapeInfo} value
 */
 Ammo.LocalConvexResult.prototype.set_m_localShapeInfo = function(value) {};
 /**
@@ -925,7 +903,7 @@ Ammo.LocalConvexResult.prototype.get_m_hitNormalLocal = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.LocalConvexResult.prototype.set_m_hitNormalLocal = function(value) {};
 /**
@@ -937,7 +915,7 @@ Ammo.LocalConvexResult.prototype.get_m_hitPointLocal = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.LocalConvexResult.prototype.set_m_hitPointLocal = function(value) {};
 /**
@@ -949,7 +927,7 @@ Ammo.LocalConvexResult.prototype.get_m_hitFraction = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.LocalConvexResult.prototype.set_m_hitFraction = function(value) {};
 
@@ -969,7 +947,7 @@ Ammo.ConvexResultCallback.prototype.get_m_collisionFilterGroup = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.ConvexResultCallback.prototype.set_m_collisionFilterGroup = function(value) {};
 /**
@@ -981,7 +959,7 @@ Ammo.ConvexResultCallback.prototype.get_m_collisionFilterMask = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.ConvexResultCallback.prototype.set_m_collisionFilterMask = function(value) {};
 /**
@@ -993,15 +971,15 @@ Ammo.ConvexResultCallback.prototype.get_m_closestHitFraction = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.ConvexResultCallback.prototype.set_m_closestHitFraction = function(value) {};
 
 /**
 	@constructor
 	@implements Ammo.ConvexResultCallback
-	@param convexFromWorld {Ammo.btVector3}
-	@param convexToWorld {Ammo.btVector3}
+	@param {Ammo.btVector3} convexFromWorld
+	@param {Ammo.btVector3} convexToWorld
 */
 Ammo.ClosestConvexResultCallback = function(convexFromWorld, convexToWorld) {};
 /**
@@ -1013,7 +991,7 @@ Ammo.ClosestConvexResultCallback.prototype.get_m_convexFromWorld = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.ClosestConvexResultCallback.prototype.set_m_convexFromWorld = function(value) {};
 /**
@@ -1025,7 +1003,7 @@ Ammo.ClosestConvexResultCallback.prototype.get_m_convexToWorld = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.ClosestConvexResultCallback.prototype.set_m_convexToWorld = function(value) {};
 /**
@@ -1037,7 +1015,7 @@ Ammo.ClosestConvexResultCallback.prototype.get_m_hitNormalWorld = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.ClosestConvexResultCallback.prototype.set_m_hitNormalWorld = function(value) {};
 /**
@@ -1049,7 +1027,7 @@ Ammo.ClosestConvexResultCallback.prototype.get_m_hitPointWorld = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.ClosestConvexResultCallback.prototype.set_m_hitPointWorld = function(value) {};
 /**
@@ -1068,7 +1046,7 @@ Ammo.ClosestConvexResultCallback.prototype.get_m_collisionFilterGroup = function
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.ClosestConvexResultCallback.prototype.set_m_collisionFilterGroup = function(value) {};
 /**
@@ -1080,7 +1058,7 @@ Ammo.ClosestConvexResultCallback.prototype.get_m_collisionFilterMask = function(
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.ClosestConvexResultCallback.prototype.set_m_collisionFilterMask = function(value) {};
 /**
@@ -1092,24 +1070,24 @@ Ammo.ClosestConvexResultCallback.prototype.get_m_closestHitFraction = function()
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.ClosestConvexResultCallback.prototype.set_m_closestHitFraction = function(value) {};
 
 /**
 	@function
-	@param scaling {Ammo.btVector3}
+	@param {Ammo.btVector3} scaling
 */
 Ammo.btCollisionShape.prototype.setLocalScaling = function(scaling) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btCollisionShape.prototype.calculateLocalInertia = function(mass, inertia) {};
 /**
 	@function
-	@param margin {Number}
+	@param {Number} margin
 */
 Ammo.btCollisionShape.prototype.setMargin = function(margin) {};
 /**
@@ -1122,18 +1100,18 @@ Ammo.btCollisionShape.prototype.getMargin = function() {
 
 /**
 	@function
-	@param scaling {Ammo.btVector3}
+	@param {Ammo.btVector3} scaling
 */
 Ammo.btConvexShape.prototype.setLocalScaling = function(scaling) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btConvexShape.prototype.calculateLocalInertia = function(mass, inertia) {};
 /**
 	@function
-	@param margin {Number}
+	@param {Number} margin
 */
 Ammo.btConvexShape.prototype.setMargin = function(margin) {};
 /**
@@ -1147,24 +1125,24 @@ Ammo.btConvexShape.prototype.getMargin = function() {
 /**
 	@constructor
 	@implements Ammo.btConvexShape
-	@param meshInterface {Ammo.btStridingMeshInterface}
-	@param [calcAabb] {Boolean}
+	@param {Ammo.btStridingMeshInterface} meshInterface
+	@param {Boolean} [calcAabb]
 */
 Ammo.btConvexTriangleMeshShape = function(meshInterface, calcAabb) {};
 /**
 	@function
-	@param scaling {Ammo.btVector3}
+	@param {Ammo.btVector3} scaling
 */
 Ammo.btConvexTriangleMeshShape.prototype.setLocalScaling = function(scaling) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btConvexTriangleMeshShape.prototype.calculateLocalInertia = function(mass, inertia) {};
 /**
 	@function
-	@param margin {Number}
+	@param {Number} margin
 */
 Ammo.btConvexTriangleMeshShape.prototype.setMargin = function(margin) {};
 /**
@@ -1178,12 +1156,12 @@ Ammo.btConvexTriangleMeshShape.prototype.getMargin = function() {
 /**
 	@constructor
 	@implements Ammo.btCollisionShape
-	@param boxHalfExtents {Ammo.btVector3}
+	@param {Ammo.btVector3} boxHalfExtents
 */
 Ammo.btBoxShape = function(boxHalfExtents) {};
 /**
 	@function
-	@param margin {Number}
+	@param {Number} margin
 */
 Ammo.btBoxShape.prototype.setMargin = function(margin) {};
 /**
@@ -1195,26 +1173,26 @@ Ammo.btBoxShape.prototype.getMargin = function() {
 };
 /**
 	@function
-	@param scaling {Ammo.btVector3}
+	@param {Ammo.btVector3} scaling
 */
 Ammo.btBoxShape.prototype.setLocalScaling = function(scaling) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btBoxShape.prototype.calculateLocalInertia = function(mass, inertia) {};
 
 /**
 	@constructor
 	@implements Ammo.btCollisionShape
-	@param radius {Number}
-	@param height {Number}
+	@param {Number} radius
+	@param {Number} height
 */
 Ammo.btCapsuleShape = function(radius, height) {};
 /**
 	@function
-	@param margin {Number}
+	@param {Number} margin
 */
 Ammo.btCapsuleShape.prototype.setMargin = function(margin) {};
 /**
@@ -1226,26 +1204,26 @@ Ammo.btCapsuleShape.prototype.getMargin = function() {
 };
 /**
 	@function
-	@param scaling {Ammo.btVector3}
+	@param {Ammo.btVector3} scaling
 */
 Ammo.btCapsuleShape.prototype.setLocalScaling = function(scaling) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btCapsuleShape.prototype.calculateLocalInertia = function(mass, inertia) {};
 
 /**
 	@constructor
 	@implements Ammo.btCapsuleShape
-	@param radius {Number}
-	@param height {Number}
+	@param {Number} radius
+	@param {Number} height
 */
 Ammo.btCapsuleShapeX = function(radius, height) {};
 /**
 	@function
-	@param margin {Number}
+	@param {Number} margin
 */
 Ammo.btCapsuleShapeX.prototype.setMargin = function(margin) {};
 /**
@@ -1258,32 +1236,32 @@ Ammo.btCapsuleShapeX.prototype.getMargin = function() {
 /**
 	@constructor
 	@implements Ammo.btCapsuleShape
-	@param radius {Number}
-	@param height {Number}
+	@param {Number} radius
+	@param {Number} height
 */
 Ammo.btCapsuleShapeX = function(radius, height) {};
 /**
 	@function
-	@param scaling {Ammo.btVector3}
+	@param {Ammo.btVector3} scaling
 */
 Ammo.btCapsuleShapeX.prototype.setLocalScaling = function(scaling) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btCapsuleShapeX.prototype.calculateLocalInertia = function(mass, inertia) {};
 
 /**
 	@constructor
 	@implements Ammo.btCapsuleShape
-	@param radius {Number}
-	@param height {Number}
+	@param {Number} radius
+	@param {Number} height
 */
 Ammo.btCapsuleShapeZ = function(radius, height) {};
 /**
 	@function
-	@param margin {Number}
+	@param {Number} margin
 */
 Ammo.btCapsuleShapeZ.prototype.setMargin = function(margin) {};
 /**
@@ -1296,31 +1274,31 @@ Ammo.btCapsuleShapeZ.prototype.getMargin = function() {
 /**
 	@constructor
 	@implements Ammo.btCapsuleShape
-	@param radius {Number}
-	@param height {Number}
+	@param {Number} radius
+	@param {Number} height
 */
 Ammo.btCapsuleShapeZ = function(radius, height) {};
 /**
 	@function
-	@param scaling {Ammo.btVector3}
+	@param {Ammo.btVector3} scaling
 */
 Ammo.btCapsuleShapeZ.prototype.setLocalScaling = function(scaling) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btCapsuleShapeZ.prototype.calculateLocalInertia = function(mass, inertia) {};
 
 /**
 	@constructor
 	@implements Ammo.btCollisionShape
-	@param halfExtents {Ammo.btVector3}
+	@param {Ammo.btVector3} halfExtents
 */
 Ammo.btCylinderShape = function(halfExtents) {};
 /**
 	@function
-	@param margin {Number}
+	@param {Number} margin
 */
 Ammo.btCylinderShape.prototype.setMargin = function(margin) {};
 /**
@@ -1332,25 +1310,25 @@ Ammo.btCylinderShape.prototype.getMargin = function() {
 };
 /**
 	@function
-	@param scaling {Ammo.btVector3}
+	@param {Ammo.btVector3} scaling
 */
 Ammo.btCylinderShape.prototype.setLocalScaling = function(scaling) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btCylinderShape.prototype.calculateLocalInertia = function(mass, inertia) {};
 
 /**
 	@constructor
 	@implements Ammo.btCylinderShape
-	@param halfExtents {Ammo.btVector3}
+	@param {Ammo.btVector3} halfExtents
 */
 Ammo.btCylinderShapeX = function(halfExtents) {};
 /**
 	@function
-	@param margin {Number}
+	@param {Number} margin
 */
 Ammo.btCylinderShapeX.prototype.setMargin = function(margin) {};
 /**
@@ -1363,30 +1341,30 @@ Ammo.btCylinderShapeX.prototype.getMargin = function() {
 /**
 	@constructor
 	@implements Ammo.btCylinderShape
-	@param halfExtents {Ammo.btVector3}
+	@param {Ammo.btVector3} halfExtents
 */
 Ammo.btCylinderShapeX = function(halfExtents) {};
 /**
 	@function
-	@param scaling {Ammo.btVector3}
+	@param {Ammo.btVector3} scaling
 */
 Ammo.btCylinderShapeX.prototype.setLocalScaling = function(scaling) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btCylinderShapeX.prototype.calculateLocalInertia = function(mass, inertia) {};
 
 /**
 	@constructor
 	@implements Ammo.btCylinderShape
-	@param halfExtents {Ammo.btVector3}
+	@param {Ammo.btVector3} halfExtents
 */
 Ammo.btCylinderShapeZ = function(halfExtents) {};
 /**
 	@function
-	@param margin {Number}
+	@param {Number} margin
 */
 Ammo.btCylinderShapeZ.prototype.setMargin = function(margin) {};
 /**
@@ -1399,30 +1377,30 @@ Ammo.btCylinderShapeZ.prototype.getMargin = function() {
 /**
 	@constructor
 	@implements Ammo.btCylinderShape
-	@param halfExtents {Ammo.btVector3}
+	@param {Ammo.btVector3} halfExtents
 */
 Ammo.btCylinderShapeZ = function(halfExtents) {};
 /**
 	@function
-	@param scaling {Ammo.btVector3}
+	@param {Ammo.btVector3} scaling
 */
 Ammo.btCylinderShapeZ.prototype.setLocalScaling = function(scaling) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btCylinderShapeZ.prototype.calculateLocalInertia = function(mass, inertia) {};
 
 /**
 	@constructor
 	@implements Ammo.btCollisionShape
-	@param radius {Number}
+	@param {Number} radius
 */
 Ammo.btSphereShape = function(radius) {};
 /**
 	@function
-	@param margin {Number}
+	@param {Number} margin
 */
 Ammo.btSphereShape.prototype.setMargin = function(margin) {};
 /**
@@ -1434,37 +1412,37 @@ Ammo.btSphereShape.prototype.getMargin = function() {
 };
 /**
 	@function
-	@param scaling {Ammo.btVector3}
+	@param {Ammo.btVector3} scaling
 */
 Ammo.btSphereShape.prototype.setLocalScaling = function(scaling) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btSphereShape.prototype.calculateLocalInertia = function(mass, inertia) {};
 
 /**
 	@constructor
 	@implements Ammo.btCollisionShape
-	@param radius {Number}
-	@param height {Number}
+	@param {Number} radius
+	@param {Number} height
 */
 Ammo.btConeShape = function(radius, height) {};
 /**
 	@function
-	@param scaling {Ammo.btVector3}
+	@param {Ammo.btVector3} scaling
 */
 Ammo.btConeShape.prototype.setLocalScaling = function(scaling) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btConeShape.prototype.calculateLocalInertia = function(mass, inertia) {};
 /**
 	@function
-	@param margin {Number}
+	@param {Number} margin
 */
 Ammo.btConeShape.prototype.setMargin = function(margin) {};
 /**
@@ -1482,13 +1460,13 @@ Ammo.btConeShape.prototype.getMargin = function() {
 Ammo.btConvexHullShape = function() {};
 /**
 	@function
-	@param point {Ammo.btVector3}
-	@param [recalculateLocalAABB] {Boolean}
+	@param {Ammo.btVector3} point
+	@param {Boolean} [recalculateLocalAABB]
 */
 Ammo.btConvexHullShape.prototype.addPoint = function(point, recalculateLocalAABB) {};
 /**
 	@function
-	@param margin {Number}
+	@param {Number} margin
 */
 Ammo.btConvexHullShape.prototype.setMargin = function(margin) {};
 /**
@@ -1500,44 +1478,44 @@ Ammo.btConvexHullShape.prototype.getMargin = function() {
 };
 /**
 	@function
-	@param scaling {Ammo.btVector3}
+	@param {Ammo.btVector3} scaling
 */
 Ammo.btConvexHullShape.prototype.setLocalScaling = function(scaling) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btConvexHullShape.prototype.calculateLocalInertia = function(mass, inertia) {};
 
 /**
 	@constructor
 	@implements Ammo.btConeShape
-	@param radius {Number}
-	@param height {Number}
+	@param {Number} radius
+	@param {Number} height
 */
 Ammo.btConeShapeX = function(radius, height) {};
 /**
 	@constructor
 	@implements Ammo.btConeShape
-	@param radius {Number}
-	@param height {Number}
+	@param {Number} radius
+	@param {Number} height
 */
 Ammo.btConeShapeX = function(radius, height) {};
 /**
 	@function
-	@param scaling {Ammo.btVector3}
+	@param {Ammo.btVector3} scaling
 */
 Ammo.btConeShapeX.prototype.setLocalScaling = function(scaling) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btConeShapeX.prototype.calculateLocalInertia = function(mass, inertia) {};
 /**
 	@function
-	@param margin {Number}
+	@param {Number} margin
 */
 Ammo.btConeShapeX.prototype.setMargin = function(margin) {};
 /**
@@ -1551,31 +1529,31 @@ Ammo.btConeShapeX.prototype.getMargin = function() {
 /**
 	@constructor
 	@implements Ammo.btConeShape
-	@param radius {Number}
-	@param height {Number}
+	@param {Number} radius
+	@param {Number} height
 */
 Ammo.btConeShapeZ = function(radius, height) {};
 /**
 	@constructor
 	@implements Ammo.btConeShape
-	@param radius {Number}
-	@param height {Number}
+	@param {Number} radius
+	@param {Number} height
 */
 Ammo.btConeShapeZ = function(radius, height) {};
 /**
 	@function
-	@param scaling {Ammo.btVector3}
+	@param {Ammo.btVector3} scaling
 */
 Ammo.btConeShapeZ.prototype.setLocalScaling = function(scaling) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btConeShapeZ.prototype.calculateLocalInertia = function(mass, inertia) {};
 /**
 	@function
-	@param margin {Number}
+	@param {Number} margin
 */
 Ammo.btConeShapeZ.prototype.setMargin = function(margin) {};
 /**
@@ -1589,18 +1567,18 @@ Ammo.btConeShapeZ.prototype.getMargin = function() {
 /**
 	@constructor
 	@implements Ammo.btCollisionShape
-	@param [enableDynamicAabbTree] {Boolean}
+	@param {Boolean} [enableDynamicAabbTree]
 */
 Ammo.btCompoundShape = function(enableDynamicAabbTree) {};
 /**
 	@function
-	@param localTransform {Ammo.btTransform}
-	@param shape {Ammo.btCollisionShape}
+	@param {Ammo.btTransform} localTransform
+	@param {Ammo.btCollisionShape} shape
 */
 Ammo.btCompoundShape.prototype.addChildShape = function(localTransform, shape) {};
 /**
 	@function
-	@param childShapeindex {Number}
+	@param {Number} childShapeindex
 */
 Ammo.btCompoundShape.prototype.removeChildShapeByIndex = function(childShapeindex) {};
 /**
@@ -1612,7 +1590,7 @@ Ammo.btCompoundShape.prototype.getNumChildShapes = function() {
 };
 /**
 	@function
-	@param index {Number}
+	@param {Number} index
 	@return {Ammo.btCollisionShape}
 */
 Ammo.btCompoundShape.prototype.getChildShape = function(index) {
@@ -1620,7 +1598,7 @@ Ammo.btCompoundShape.prototype.getChildShape = function(index) {
 };
 /**
 	@function
-	@param margin {Number}
+	@param {Number} margin
 */
 Ammo.btCompoundShape.prototype.setMargin = function(margin) {};
 /**
@@ -1632,13 +1610,13 @@ Ammo.btCompoundShape.prototype.getMargin = function() {
 };
 /**
 	@function
-	@param scaling {Ammo.btVector3}
+	@param {Ammo.btVector3} scaling
 */
 Ammo.btCompoundShape.prototype.setLocalScaling = function(scaling) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btCompoundShape.prototype.calculateLocalInertia = function(mass, inertia) {};
 
@@ -1646,33 +1624,33 @@ Ammo.btCompoundShape.prototype.calculateLocalInertia = function(mass, inertia) {
 /**
 	@constructor
 	@implements Ammo.btStridingMeshInterface
-	@param [use32bitIndices] {Boolean}
-	@param [use4componentVertices] {Boolean}
+	@param {Boolean} [use32bitIndices]
+	@param {Boolean} [use4componentVertices]
 */
 Ammo.btTriangleMesh = function(use32bitIndices, use4componentVertices) {};
 /**
 	@function
-	@param vertex0 {Ammo.btVector3}
-	@param vertex1 {Ammo.btVector3}
-	@param vertex2 {Ammo.btVector3}
-	@param [removeDuplicateVertices] {Boolean}
+	@param {Ammo.btVector3} vertex0
+	@param {Ammo.btVector3} vertex1
+	@param {Ammo.btVector3} vertex2
+	@param {Boolean} [removeDuplicateVertices]
 */
 Ammo.btTriangleMesh.prototype.addTriangle = function(vertex0, vertex1, vertex2, removeDuplicateVertices) {};
 
 /**
 	@function
-	@param scaling {Ammo.btVector3}
+	@param {Ammo.btVector3} scaling
 */
 Ammo.btConcaveShape.prototype.setLocalScaling = function(scaling) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btConcaveShape.prototype.calculateLocalInertia = function(mass, inertia) {};
 /**
 	@function
-	@param margin {Number}
+	@param {Number} margin
 */
 Ammo.btConcaveShape.prototype.setMargin = function(margin) {};
 /**
@@ -1686,24 +1664,24 @@ Ammo.btConcaveShape.prototype.getMargin = function() {
 /**
 	@constructor
 	@implements Ammo.btConcaveShape
-	@param planeNormal {Ammo.btVector3}
-	@param planeConstant {Number}
+	@param {Ammo.btVector3} planeNormal
+	@param {Number} planeConstant
 */
 Ammo.btStaticPlaneShape = function(planeNormal, planeConstant) {};
 /**
 	@function
-	@param scaling {Ammo.btVector3}
+	@param {Ammo.btVector3} scaling
 */
 Ammo.btStaticPlaneShape.prototype.setLocalScaling = function(scaling) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btStaticPlaneShape.prototype.calculateLocalInertia = function(mass, inertia) {};
 /**
 	@function
-	@param margin {Number}
+	@param {Number} margin
 */
 Ammo.btStaticPlaneShape.prototype.setMargin = function(margin) {};
 /**
@@ -1716,18 +1694,18 @@ Ammo.btStaticPlaneShape.prototype.getMargin = function() {
 
 /**
 	@function
-	@param scaling {Ammo.btVector3}
+	@param {Ammo.btVector3} scaling
 */
 Ammo.btTriangleMeshShape.prototype.setLocalScaling = function(scaling) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btTriangleMeshShape.prototype.calculateLocalInertia = function(mass, inertia) {};
 /**
 	@function
-	@param margin {Number}
+	@param {Number} margin
 */
 Ammo.btTriangleMeshShape.prototype.setMargin = function(margin) {};
 /**
@@ -1741,25 +1719,25 @@ Ammo.btTriangleMeshShape.prototype.getMargin = function() {
 /**
 	@constructor
 	@implements Ammo.btTriangleMeshShape
-	@param meshInterface {Ammo.btStridingMeshInterface}
-	@param useQuantizedAabbCompression {Boolean}
-	@param [buildBvh] {Boolean}
+	@param {Ammo.btStridingMeshInterface} meshInterface
+	@param {Boolean} useQuantizedAabbCompression
+	@param {Boolean} [buildBvh]
 */
 Ammo.btBvhTriangleMeshShape = function(meshInterface, useQuantizedAabbCompression, buildBvh) {};
 /**
 	@function
-	@param scaling {Ammo.btVector3}
+	@param {Ammo.btVector3} scaling
 */
 Ammo.btBvhTriangleMeshShape.prototype.setLocalScaling = function(scaling) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btBvhTriangleMeshShape.prototype.calculateLocalInertia = function(mass, inertia) {};
 /**
 	@function
-	@param margin {Number}
+	@param {Number} margin
 */
 Ammo.btBvhTriangleMeshShape.prototype.setMargin = function(margin) {};
 /**
@@ -1773,20 +1751,20 @@ Ammo.btBvhTriangleMeshShape.prototype.getMargin = function() {
 /**
 	@constructor
 	@implements Ammo.btConcaveShape
-	@param heightStickWidth {Number}
-	@param heightStickLength {Number}
-	@param heightfieldData {*}
-	@param heightScale {Number}
-	@param minHeight {Number}
-	@param maxHeight {Number}
-	@param upAxis {Number}
-	@param hdt {*}
-	@param flipQuadEdges {Boolean}
+	@param {Number} heightStickWidth
+	@param {Number} heightStickLength
+	@param {*} heightfieldData
+	@param {Number} heightScale
+	@param {Number} minHeight
+	@param {Number} maxHeight
+	@param {Number} upAxis
+	@param {*} hdt
+	@param {Boolean} flipQuadEdges
 */
 Ammo.btHeightfieldTerrainShape = function(heightStickWidth, heightStickLength, heightfieldData, heightScale, minHeight, maxHeight, upAxis, hdt, flipQuadEdges) {};
 /**
 	@function
-	@param margin {Number}
+	@param {Number} margin
 */
 Ammo.btHeightfieldTerrainShape.prototype.setMargin = function(margin) {};
 /**
@@ -1798,13 +1776,13 @@ Ammo.btHeightfieldTerrainShape.prototype.getMargin = function() {
 };
 /**
 	@function
-	@param scaling {Ammo.btVector3}
+	@param {Ammo.btVector3} scaling
 */
 Ammo.btHeightfieldTerrainShape.prototype.setLocalScaling = function(scaling) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btHeightfieldTerrainShape.prototype.calculateLocalInertia = function(mass, inertia) {};
 
@@ -1815,7 +1793,7 @@ Ammo.btDefaultCollisionConstructionInfo = function() {};
 
 /**
 	@constructor
-	@param [info] {Ammo.btDefaultCollisionConstructionInfo}
+	@param {Ammo.btDefaultCollisionConstructionInfo} [info]
 */
 Ammo.btDefaultCollisionConfiguration = function(info) {};
 
@@ -1846,7 +1824,7 @@ Ammo.btPersistentManifold.prototype.getNumContacts = function() {
 };
 /**
 	@function
-	@param index {Number}
+	@param {Number} index
 	@return {Ammo.btManifoldPoint}
 */
 Ammo.btPersistentManifold.prototype.getContactPoint = function(index) {
@@ -1862,7 +1840,7 @@ Ammo.btDispatcher.prototype.getNumManifolds = function() {
 };
 /**
 	@function
-	@param index {Number}
+	@param {Number} index
 	@return {Ammo.btPersistentManifold}
 */
 Ammo.btDispatcher.prototype.getManifoldByIndexInternal = function(index) {
@@ -1872,7 +1850,7 @@ Ammo.btDispatcher.prototype.getManifoldByIndexInternal = function(index) {
 /**
 	@constructor
 	@implements Ammo.btDispatcher
-	@param conf {Ammo.btDefaultCollisionConfiguration}
+	@param {Ammo.btDefaultCollisionConfiguration} conf
 */
 Ammo.btCollisionDispatcher = function(conf) {};
 /**
@@ -1884,7 +1862,7 @@ Ammo.btCollisionDispatcher.prototype.getNumManifolds = function() {
 };
 /**
 	@function
-	@param index {Number}
+	@param {Number} index
 	@return {Ammo.btPersistentManifold}
 */
 Ammo.btCollisionDispatcher.prototype.getManifoldByIndexInternal = function(index) {
@@ -1894,17 +1872,17 @@ Ammo.btCollisionDispatcher.prototype.getManifoldByIndexInternal = function(index
 
 /**
 	@function
-	@param ghostPairCallback {Ammo.btOverlappingPairCallback}
+	@param {Ammo.btOverlappingPairCallback} ghostPairCallback
 */
 Ammo.btOverlappingPairCache.prototype.setInternalGhostPairCallback = function(ghostPairCallback) {};
 
 /**
 	@constructor
-	@param worldAabbMin {Ammo.btVector3}
-	@param worldAabbMax {Ammo.btVector3}
-	@param [maxHandles] {Number}
-	@param [pairCache] {Ammo.btOverlappingPairCache}
-	@param [disableRaycastAccelerator] {Boolean}
+	@param {Ammo.btVector3} worldAabbMin
+	@param {Ammo.btVector3} worldAabbMax
+	@param {Number} [maxHandles]
+	@param {Ammo.btOverlappingPairCache} [pairCache]
+	@param {Boolean} [disableRaycastAccelerator]
 */
 Ammo.btAxisSweep3 = function(worldAabbMin, worldAabbMax, maxHandles, pairCache, disableRaycastAccelerator) {};
 
@@ -1917,10 +1895,10 @@ Ammo.btDbvtBroadphase = function() {};
 
 /**
 	@constructor
-	@param mass {Number}
-	@param motionState {Ammo.btMotionState}
-	@param collisionShape {Ammo.btCollisionShape}
-	@param [localInertia] {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btMotionState} motionState
+	@param {Ammo.btCollisionShape} collisionShape
+	@param {Ammo.btVector3} [localInertia]
 */
 Ammo.btRigidBodyConstructionInfo = function(mass, motionState, collisionShape, localInertia) {};
 /**
@@ -1932,7 +1910,7 @@ Ammo.btRigidBodyConstructionInfo.prototype.get_m_linearDamping = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btRigidBodyConstructionInfo.prototype.set_m_linearDamping = function(value) {};
 /**
@@ -1944,7 +1922,7 @@ Ammo.btRigidBodyConstructionInfo.prototype.get_m_angularDamping = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btRigidBodyConstructionInfo.prototype.set_m_angularDamping = function(value) {};
 /**
@@ -1956,7 +1934,7 @@ Ammo.btRigidBodyConstructionInfo.prototype.get_m_friction = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btRigidBodyConstructionInfo.prototype.set_m_friction = function(value) {};
 /**
@@ -1968,7 +1946,7 @@ Ammo.btRigidBodyConstructionInfo.prototype.get_m_rollingFriction = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btRigidBodyConstructionInfo.prototype.set_m_rollingFriction = function(value) {};
 /**
@@ -1980,7 +1958,7 @@ Ammo.btRigidBodyConstructionInfo.prototype.get_m_restitution = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btRigidBodyConstructionInfo.prototype.set_m_restitution = function(value) {};
 /**
@@ -1992,7 +1970,7 @@ Ammo.btRigidBodyConstructionInfo.prototype.get_m_linearSleepingThreshold = funct
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btRigidBodyConstructionInfo.prototype.set_m_linearSleepingThreshold = function(value) {};
 /**
@@ -2004,7 +1982,7 @@ Ammo.btRigidBodyConstructionInfo.prototype.get_m_angularSleepingThreshold = func
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btRigidBodyConstructionInfo.prototype.set_m_angularSleepingThreshold = function(value) {};
 /**
@@ -2016,7 +1994,7 @@ Ammo.btRigidBodyConstructionInfo.prototype.get_m_additionalDamping = function() 
 };
 /**
 	@function
-	@param value {Boolean}
+	@param {Boolean} value
 */
 Ammo.btRigidBodyConstructionInfo.prototype.set_m_additionalDamping = function(value) {};
 /**
@@ -2028,7 +2006,7 @@ Ammo.btRigidBodyConstructionInfo.prototype.get_m_additionalDampingFactor = funct
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btRigidBodyConstructionInfo.prototype.set_m_additionalDampingFactor = function(value) {};
 /**
@@ -2040,7 +2018,7 @@ Ammo.btRigidBodyConstructionInfo.prototype.get_m_additionalLinearDampingThreshol
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btRigidBodyConstructionInfo.prototype.set_m_additionalLinearDampingThresholdSqr = function(value) {};
 /**
@@ -2052,7 +2030,7 @@ Ammo.btRigidBodyConstructionInfo.prototype.get_m_additionalAngularDampingThresho
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btRigidBodyConstructionInfo.prototype.set_m_additionalAngularDampingThresholdSqr = function(value) {};
 /**
@@ -2064,14 +2042,14 @@ Ammo.btRigidBodyConstructionInfo.prototype.get_m_additionalAngularDampingFactor 
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btRigidBodyConstructionInfo.prototype.set_m_additionalAngularDampingFactor = function(value) {};
 
 /**
 	@constructor
 	@implements Ammo.btCollisionObject
-	@param constructionInfo {Ammo.btRigidBodyConstructionInfo}
+	@param {Ammo.btRigidBodyConstructionInfo} constructionInfo
 */
 Ammo.btRigidBody = function(constructionInfo) {};
 /**
@@ -2083,72 +2061,72 @@ Ammo.btRigidBody.prototype.getCenterOfMassTransform = function() {
 };
 /**
 	@function
-	@param xform {Ammo.btTransform}
+	@param {Ammo.btTransform} xform
 */
 Ammo.btRigidBody.prototype.setCenterOfMassTransform = function(xform) {};
 /**
 	@function
-	@param linear {Number}
-	@param angular {Number}
+	@param {Number} linear
+	@param {Number} angular
 */
 Ammo.btRigidBody.prototype.setSleepingThresholds = function(linear, angular) {};
 /**
 	@function
-	@param lin_damping {Number}
-	@param ang_damping {Number}
+	@param {Number} lin_damping
+	@param {Number} ang_damping
 */
 Ammo.btRigidBody.prototype.setDamping = function(lin_damping, ang_damping) {};
 /**
 	@function
-	@param mass {Number}
-	@param inertia {Ammo.btVector3}
+	@param {Number} mass
+	@param {Ammo.btVector3} inertia
 */
 Ammo.btRigidBody.prototype.setMassProps = function(mass, inertia) {};
 /**
 	@function
-	@param linearFactor {Ammo.btVector3}
+	@param {Ammo.btVector3} linearFactor
 */
 Ammo.btRigidBody.prototype.setLinearFactor = function(linearFactor) {};
 /**
 	@function
-	@param torque {Ammo.btVector3}
+	@param {Ammo.btVector3} torque
 */
 Ammo.btRigidBody.prototype.applyTorque = function(torque) {};
 /**
 	@function
-	@param torque {Ammo.btVector3}
+	@param {Ammo.btVector3} torque
 */
 Ammo.btRigidBody.prototype.applyLocalTorque = function(torque) {};
 /**
 	@function
-	@param force {Ammo.btVector3}
-	@param rel_pos {Ammo.btVector3}
+	@param {Ammo.btVector3} force
+	@param {Ammo.btVector3} rel_pos
 */
 Ammo.btRigidBody.prototype.applyForce = function(force, rel_pos) {};
 /**
 	@function
-	@param force {Ammo.btVector3}
+	@param {Ammo.btVector3} force
 */
 Ammo.btRigidBody.prototype.applyCentralForce = function(force) {};
 /**
 	@function
-	@param force {Ammo.btVector3}
+	@param {Ammo.btVector3} force
 */
 Ammo.btRigidBody.prototype.applyCentralLocalForce = function(force) {};
 /**
 	@function
-	@param torque {Ammo.btVector3}
+	@param {Ammo.btVector3} torque
 */
 Ammo.btRigidBody.prototype.applyTorqueImpulse = function(torque) {};
 /**
 	@function
-	@param impulse {Ammo.btVector3}
-	@param rel_pos {Ammo.btVector3}
+	@param {Ammo.btVector3} impulse
+	@param {Ammo.btVector3} rel_pos
 */
 Ammo.btRigidBody.prototype.applyImpulse = function(impulse, rel_pos) {};
 /**
 	@function
-	@param impulse {Ammo.btVector3}
+	@param {Ammo.btVector3} impulse
 */
 Ammo.btRigidBody.prototype.applyCentralImpulse = function(impulse) {};
 /**
@@ -2171,12 +2149,12 @@ Ammo.btRigidBody.prototype.getAngularVelocity = function() {
 };
 /**
 	@function
-	@param lin_vel {Ammo.btVector3}
+	@param {Ammo.btVector3} lin_vel
 */
 Ammo.btRigidBody.prototype.setLinearVelocity = function(lin_vel) {};
 /**
 	@function
-	@param ang_vel {Ammo.btVector3}
+	@param {Ammo.btVector3} ang_vel
 */
 Ammo.btRigidBody.prototype.setAngularVelocity = function(ang_vel) {};
 /**
@@ -2188,17 +2166,17 @@ Ammo.btRigidBody.prototype.getMotionState = function() {
 };
 /**
 	@function
-	@param motionState {Ammo.btMotionState}
+	@param {Ammo.btMotionState} motionState
 */
 Ammo.btRigidBody.prototype.setMotionState = function(motionState) {};
 /**
 	@function
-	@param angularFactor {Ammo.btVector3}
+	@param {Ammo.btVector3} angularFactor
 */
 Ammo.btRigidBody.prototype.setAngularFactor = function(angularFactor) {};
 /**
 	@function
-	@param colObj {Ammo.btCollisionObject}
+	@param {Ammo.btCollisionObject} colObj
 	@return {Ammo.btRigidBody}
 */
 Ammo.btRigidBody.prototype.upcast = function(colObj) {
@@ -2206,8 +2184,8 @@ Ammo.btRigidBody.prototype.upcast = function(colObj) {
 };
 /**
 	@function
-	@param anisotropicFriction {Ammo.btVector3}
-	@param frictionMode {Number}
+	@param {Ammo.btVector3} anisotropicFriction
+	@param {Number} frictionMode
 */
 Ammo.btRigidBody.prototype.setAnisotropicFriction = function(anisotropicFriction, frictionMode) {};
 /**
@@ -2219,22 +2197,22 @@ Ammo.btRigidBody.prototype.getCollisionShape = function() {
 };
 /**
 	@function
-	@param contactProcessingThreshold {Number}
+	@param {Number} contactProcessingThreshold
 */
 Ammo.btRigidBody.prototype.setContactProcessingThreshold = function(contactProcessingThreshold) {};
 /**
 	@function
-	@param newState {Number}
+	@param {Number} newState
 */
 Ammo.btRigidBody.prototype.setActivationState = function(newState) {};
 /**
 	@function
-	@param newState {Number}
+	@param {Number} newState
 */
 Ammo.btRigidBody.prototype.forceActivationState = function(newState) {};
 /**
 	@function
-	@param [forceActivation] {Boolean}
+	@param {Boolean} [forceActivation]
 */
 Ammo.btRigidBody.prototype.activate = function(forceActivation) {};
 /**
@@ -2253,17 +2231,17 @@ Ammo.btRigidBody.prototype.isKinematicObject = function() {
 };
 /**
 	@function
-	@param rest {Number}
+	@param {Number} rest
 */
 Ammo.btRigidBody.prototype.setRestitution = function(rest) {};
 /**
 	@function
-	@param frict {Number}
+	@param {Number} frict
 */
 Ammo.btRigidBody.prototype.setFriction = function(frict) {};
 /**
 	@function
-	@param frict {Number}
+	@param {Number} frict
 */
 Ammo.btRigidBody.prototype.setRollingFriction = function(frict) {};
 /**
@@ -2282,27 +2260,27 @@ Ammo.btRigidBody.prototype.getCollisionFlags = function() {
 };
 /**
 	@function
-	@param flags {Number}
+	@param {Number} flags
 */
 Ammo.btRigidBody.prototype.setCollisionFlags = function(flags) {};
 /**
 	@function
-	@param worldTrans {Ammo.btTransform}
+	@param {Ammo.btTransform} worldTrans
 */
 Ammo.btRigidBody.prototype.setWorldTransform = function(worldTrans) {};
 /**
 	@function
-	@param collisionShape {Ammo.btCollisionShape}
+	@param {Ammo.btCollisionShape} collisionShape
 */
 Ammo.btRigidBody.prototype.setCollisionShape = function(collisionShape) {};
 /**
 	@function
-	@param ccdMotionThreshold {Number}
+	@param {Number} ccdMotionThreshold
 */
 Ammo.btRigidBody.prototype.setCcdMotionThreshold = function(ccdMotionThreshold) {};
 /**
 	@function
-	@param radius {Number}
+	@param {Number} radius
 */
 Ammo.btRigidBody.prototype.setCcdSweptSphereRadius = function(radius) {};
 /**
@@ -2314,7 +2292,7 @@ Ammo.btRigidBody.prototype.getUserIndex = function() {
 };
 /**
 	@function
-	@param index {Number}
+	@param {Number} index
 */
 Ammo.btRigidBody.prototype.setUserIndex = function(index) {};
 /**
@@ -2326,7 +2304,7 @@ Ammo.btRigidBody.prototype.getUserPointer = function() {
 };
 /**
 	@function
-	@param userPointer {*}
+	@param {*} userPointer
 */
 Ammo.btRigidBody.prototype.setUserPointer = function(userPointer) {};
 
@@ -2343,7 +2321,7 @@ Ammo.btConstraintSetting.prototype.get_m_tau = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btConstraintSetting.prototype.set_m_tau = function(value) {};
 /**
@@ -2355,7 +2333,7 @@ Ammo.btConstraintSetting.prototype.get_m_damping = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btConstraintSetting.prototype.set_m_damping = function(value) {};
 /**
@@ -2367,13 +2345,13 @@ Ammo.btConstraintSetting.prototype.get_m_impulseClamp = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btConstraintSetting.prototype.set_m_impulseClamp = function(value) {};
 
 /**
 	@function
-	@param needsFeedback {Boolean}
+	@param {Boolean} needsFeedback
 */
 Ammo.btTypedConstraint.prototype.enableFeedback = function(needsFeedback) {};
 /**
@@ -2385,34 +2363,27 @@ Ammo.btTypedConstraint.prototype.getBreakingImpulseThreshold = function() {
 };
 /**
 	@function
-	@param threshold {Number}
+	@param {Number} threshold
 */
 Ammo.btTypedConstraint.prototype.setBreakingImpulseThreshold = function(threshold) {};
 
 /**
 	@constructor
 	@implements Ammo.btTypedConstraint
-	@param rbA {Ammo.btRigidBody}
-	@param rbB {Ammo.btRigidBody}
-	@param pivotInA {Ammo.btVector3}
-	@param pivotInB {Ammo.btVector3}
+	@param {Ammo.btRigidBody} rbA
+	@param {Ammo.btRigidBody} [rbB]
+	@param {Ammo.btVector3} [pivotInA]
+	@param {Ammo.btVector3} [pivotInB]
 */
 Ammo.btPoint2PointConstraint = function(rbA, rbB, pivotInA, pivotInB) {};
 /**
-	@constructor
-	@implements Ammo.btTypedConstraint
-	@param rbA {Ammo.btRigidBody}
-	@param pivotInA {Ammo.btVector3}
-*/
-Ammo.btPoint2PointConstraint = function(rbA, pivotInA) {};
-/**
 	@function
-	@param pivotA {Ammo.btVector3}
+	@param {Ammo.btVector3} pivotA
 */
 Ammo.btPoint2PointConstraint.prototype.setPivotA = function(pivotA) {};
 /**
 	@function
-	@param pivotB {Ammo.btVector3}
+	@param {Ammo.btVector3} pivotB
 */
 Ammo.btPoint2PointConstraint.prototype.setPivotB = function(pivotB) {};
 /**
@@ -2438,12 +2409,12 @@ Ammo.btPoint2PointConstraint.prototype.get_m_setting = function() {
 };
 /**
 	@function
-	@param value {Ammo.btConstraintSetting}
+	@param {Ammo.btConstraintSetting} value
 */
 Ammo.btPoint2PointConstraint.prototype.set_m_setting = function(value) {};
 /**
 	@function
-	@param needsFeedback {Boolean}
+	@param {Boolean} needsFeedback
 */
 Ammo.btPoint2PointConstraint.prototype.enableFeedback = function(needsFeedback) {};
 /**
@@ -2455,51 +2426,43 @@ Ammo.btPoint2PointConstraint.prototype.getBreakingImpulseThreshold = function() 
 };
 /**
 	@function
-	@param threshold {Number}
+	@param {Number} threshold
 */
 Ammo.btPoint2PointConstraint.prototype.setBreakingImpulseThreshold = function(threshold) {};
 
 /**
 	@constructor
 	@implements Ammo.btTypedConstraint
-	@param rbA {Ammo.btRigidBody}
-	@param rbB {Ammo.btRigidBody}
-	@param frameInA {Ammo.btTransform}
-	@param frameInB {Ammo.btTransform}
-	@param useLinearFrameReferenceFrameA {Boolean}
+	@param {Ammo.btRigidBody} rbA
+	@param {Ammo.btRigidBody} rbB
+	@param {Ammo.btTransform} [frameInA]
+	@param {Ammo.btTransform} [frameInB]
+	@param {Boolean} [useLinearFrameReferenceFrameA]
 */
 Ammo.btGeneric6DofConstraint = function(rbA, rbB, frameInA, frameInB, useLinearFrameReferenceFrameA) {};
 /**
-	@constructor
-	@implements Ammo.btTypedConstraint
-	@param rbB {Ammo.btRigidBody}
-	@param frameInB {Ammo.btTransform}
-	@param useLinearFrameReferenceFrameB {Boolean}
-*/
-Ammo.btGeneric6DofConstraint = function(rbB, frameInB, useLinearFrameReferenceFrameB) {};
-/**
 	@function
-	@param linearLower {Ammo.btVector3}
+	@param {Ammo.btVector3} linearLower
 */
 Ammo.btGeneric6DofConstraint.prototype.setLinearLowerLimit = function(linearLower) {};
 /**
 	@function
-	@param linearUpper {Ammo.btVector3}
+	@param {Ammo.btVector3} linearUpper
 */
 Ammo.btGeneric6DofConstraint.prototype.setLinearUpperLimit = function(linearUpper) {};
 /**
 	@function
-	@param angularLower {Ammo.btVector3}
+	@param {Ammo.btVector3} angularLower
 */
 Ammo.btGeneric6DofConstraint.prototype.setAngularLowerLimit = function(angularLower) {};
 /**
 	@function
-	@param angularUpper {Ammo.btVector3}
+	@param {Ammo.btVector3} angularUpper
 */
 Ammo.btGeneric6DofConstraint.prototype.setAngularUpperLimit = function(angularUpper) {};
 /**
 	@function
-	@param needsFeedback {Boolean}
+	@param {Boolean} needsFeedback
 */
 Ammo.btGeneric6DofConstraint.prototype.enableFeedback = function(needsFeedback) {};
 /**
@@ -2511,87 +2474,71 @@ Ammo.btGeneric6DofConstraint.prototype.getBreakingImpulseThreshold = function() 
 };
 /**
 	@function
-	@param threshold {Number}
+	@param {Number} threshold
 */
 Ammo.btGeneric6DofConstraint.prototype.setBreakingImpulseThreshold = function(threshold) {};
 
 /**
 	@constructor
 	@implements Ammo.btGeneric6DofConstraint
-	@param rbA {Ammo.btRigidBody}
-	@param rbB {Ammo.btRigidBody}
-	@param frameInA {Ammo.btTransform}
-	@param frameInB {Ammo.btTransform}
-	@param useLinearFrameReferenceFrameA {Boolean}
+	@param {Ammo.btRigidBody} rbA
+	@param {Ammo.btRigidBody} rbB
+	@param {Ammo.btTransform} [frameInA]
+	@param {Ammo.btTransform} [frameInB]
+	@param {Boolean} [useLinearFrameReferenceFrameA]
 */
 Ammo.btGeneric6DofSpringConstraint = function(rbA, rbB, frameInA, frameInB, useLinearFrameReferenceFrameA) {};
 /**
-	@constructor
-	@implements Ammo.btGeneric6DofConstraint
-	@param rbB {Ammo.btRigidBody}
-	@param frameInB {Ammo.btTransform}
-	@param useLinearFrameReferenceFrameB {Boolean}
-*/
-Ammo.btGeneric6DofSpringConstraint = function(rbB, frameInB, useLinearFrameReferenceFrameB) {};
-/**
 	@function
-	@param index {Number}
-	@param onOff {Boolean}
+	@param {Number} index
+	@param {Boolean} onOff
 */
 Ammo.btGeneric6DofSpringConstraint.prototype.enableSpring = function(index, onOff) {};
 /**
 	@function
-	@param index {Number}
-	@param stiffness {Number}
+	@param {Number} index
+	@param {Number} stiffness
 */
 Ammo.btGeneric6DofSpringConstraint.prototype.setStiffness = function(index, stiffness) {};
 /**
 	@function
-	@param index {Number}
-	@param damping {Number}
+	@param {Number} index
+	@param {Number} damping
 */
 Ammo.btGeneric6DofSpringConstraint.prototype.setDamping = function(index, damping) {};
 /**
 	@constructor
 	@implements Ammo.btGeneric6DofConstraint
-	@param rbA {Ammo.btRigidBody}
-	@param rbB {Ammo.btRigidBody}
-	@param frameInA {Ammo.btTransform}
-	@param frameInB {Ammo.btTransform}
-	@param useLinearFrameReferenceFrameA {Boolean}
+	@param {Ammo.btRigidBody} rbA
+	@param {Ammo.btRigidBody} rbB
+	@param {Ammo.btTransform} [frameInA]
+	@param {Ammo.btTransform} [frameInB]
+	@param {Boolean} [useLinearFrameReferenceFrameA]
 */
 Ammo.btGeneric6DofSpringConstraint = function(rbA, rbB, frameInA, frameInB, useLinearFrameReferenceFrameA) {};
 /**
-	@constructor
-	@implements Ammo.btGeneric6DofConstraint
-	@param rbB {Ammo.btRigidBody}
-	@param frameInB {Ammo.btTransform}
-	@param useLinearFrameReferenceFrameB {Boolean}
-*/
-Ammo.btGeneric6DofSpringConstraint = function(rbB, frameInB, useLinearFrameReferenceFrameB) {};
-/**
 	@function
-	@param linearLower {Ammo.btVector3}
+	@param {Ammo.btVector3} linearLower
 */
 Ammo.btGeneric6DofSpringConstraint.prototype.setLinearLowerLimit = function(linearLower) {};
 /**
 	@function
-	@param linearUpper {Ammo.btVector3}
+	@param {Ammo.btVector3} linearUpper
 */
 Ammo.btGeneric6DofSpringConstraint.prototype.setLinearUpperLimit = function(linearUpper) {};
 /**
 	@function
-	@param angularLower {Ammo.btVector3}
+	@param {Ammo.btVector3} angularLower
 */
 Ammo.btGeneric6DofSpringConstraint.prototype.setAngularLowerLimit = function(angularLower) {};
 /**
 	@function
-	@param angularUpper {Ammo.btVector3}
+	@param {Ammo.btVector3} angularUpper
 */
 Ammo.btGeneric6DofSpringConstraint.prototype.setAngularUpperLimit = function(angularUpper) {};
 /**
 	@function
-	@param needsFeedback {Boolean}
+	@param {Boolean} needsFeedback
 */
 Ammo.btGeneric6DofSpringConstraint.prototype.enableFeedback = function(needsFeedback) {};
 /**
@@ -2603,7 +2550,7 @@ Ammo.btGeneric6DofSpringConstraint.prototype.getBreakingImpulseThreshold = funct
 };
 /**
 	@function
-	@param threshold {Number}
+	@param {Number} threshold
 */
 Ammo.btGeneric6DofSpringConstraint.prototype.setBreakingImpulseThreshold = function(threshold) {};
 
@@ -2615,63 +2562,56 @@ Ammo.btSequentialImpulseConstraintSolver = function() {};
 /**
 	@constructor
 	@implements Ammo.btTypedConstraint
-	@param rbA {Ammo.btRigidBody}
-	@param rbB {Ammo.btRigidBody}
-	@param rbAFrame {Ammo.btTransform}
-	@param rbBFrame {Ammo.btTransform}
+	@param {Ammo.btRigidBody} rbA
+	@param {Ammo.btRigidBody} [rbB]
+	@param {Ammo.btTransform} [rbAFrame]
+	@param {Ammo.btTransform} [rbBFrame]
 */
 Ammo.btConeTwistConstraint = function(rbA, rbB, rbAFrame, rbBFrame) {};
 /**
-	@constructor
-	@implements Ammo.btTypedConstraint
-	@param rbA {Ammo.btRigidBody}
-	@param rbAFrame {Ammo.btTransform}
-*/
-Ammo.btConeTwistConstraint = function(rbA, rbAFrame) {};
-/**
 	@function
-	@param limitIndex {Number}
-	@param limitValue {Number}
+	@param {Number} limitIndex
+	@param {Number} limitValue
 */
 Ammo.btConeTwistConstraint.prototype.setLimit = function(limitIndex, limitValue) {};
 /**
 	@function
-	@param angularOnly {Boolean}
+	@param {Boolean} angularOnly
 */
 Ammo.btConeTwistConstraint.prototype.setAngularOnly = function(angularOnly) {};
 /**
 	@function
-	@param damping {Number}
+	@param {Number} damping
 */
 Ammo.btConeTwistConstraint.prototype.setDamping = function(damping) {};
 /**
 	@function
-	@param b {Boolean}
+	@param {Boolean} b
 */
 Ammo.btConeTwistConstraint.prototype.enableMotor = function(b) {};
 /**
 	@function
-	@param maxMotorImpulse {Number}
+	@param {Number} maxMotorImpulse
 */
 Ammo.btConeTwistConstraint.prototype.setMaxMotorImpulse = function(maxMotorImpulse) {};
 /**
 	@function
-	@param maxMotorImpulse {Number}
+	@param {Number} maxMotorImpulse
 */
 Ammo.btConeTwistConstraint.prototype.setMaxMotorImpulseNormalized = function(maxMotorImpulse) {};
 /**
 	@function
-	@param q {Ammo.btQuaternion}
+	@param {Ammo.btQuaternion} q
 */
 Ammo.btConeTwistConstraint.prototype.setMotorTarget = function(q) {};
 /**
 	@function
-	@param q {Ammo.btQuaternion}
+	@param {Ammo.btQuaternion} q
 */
 Ammo.btConeTwistConstraint.prototype.setMotorTargetInConstraintSpace = function(q) {};
 /**
 	@function
-	@param needsFeedback {Boolean}
+	@param {Boolean} needsFeedback
 */
 Ammo.btConeTwistConstraint.prototype.enableFeedback = function(needsFeedback) {};
 /**
@@ -2683,80 +2623,61 @@ Ammo.btConeTwistConstraint.prototype.getBreakingImpulseThreshold = function() {
 };
 /**
 	@function
-	@param threshold {Number}
+	@param {Number} threshold
 */
 Ammo.btConeTwistConstraint.prototype.setBreakingImpulseThreshold = function(threshold) {};
 
 /**
 	@constructor
 	@implements Ammo.btTypedConstraint
-	@param rbA {Ammo.btRigidBody}
-	@param rbB {Ammo.btRigidBody}
-	@param pivotInA {Ammo.btVector3}
-	@param pivotInB {Ammo.btVector3}
-	@param axisInA {Ammo.btVector3}
-	@param axisInB {Ammo.btVector3}
-	@param [useReferenceFrameA] {Boolean}
+	@param {Ammo.btRigidBody} rbA
+	@param {Ammo.btRigidBody} rbB
+	@param {Ammo.btVector3} [pivotInA]
+	@param {Ammo.btVector3} [pivotInB]
+	@param {Ammo.btVector3} [axisInA]
+	@param {Ammo.btVector3} [axisInB]
+	@param {Boolean} [useReferenceFrameA]
 */
 Ammo.btHingeConstraint = function(rbA, rbB, pivotInA, pivotInB, axisInA, axisInB, useReferenceFrameA) {};
 /**
 	@constructor
 	@implements Ammo.btTypedConstraint
-	@param rbA {Ammo.btRigidBody}
-	@param rbB {Ammo.btRigidBody}
-	@param rbAFrame {Ammo.btTransform}
-	@param rbBFrame {Ammo.btTransform}
-	@param [useReferenceFrameA] {Boolean}
-*/
-Ammo.btHingeConstraint = function(rbA, rbB, rbAFrame, rbBFrame, useReferenceFrameA) {};
-/**
-	@constructor
-	@implements Ammo.btTypedConstraint
-	@param rbA {Ammo.btRigidBody}
-	@param rbAFrame {Ammo.btTransform}
-	@param [useReferenceFrameA] {Boolean}
+	@param {Ammo.btRigidBody} rbA
+	@param {Ammo.btTransform} rbAFrame
+	@param {Boolean} [useReferenceFrameA]
 */
 Ammo.btHingeConstraint = function(rbA, rbAFrame, useReferenceFrameA) {};
 /**
 	@function
-	@param low {Number}
-	@param high {Number}
-	@param softness {Number}
-	@param biasFactor {Number}
-	@param [relaxationFactor] {Number}
-*/
-Ammo.btHingeConstraint.prototype.setLimit = function(low, high, softness, biasFactor, relaxationFactor) {};
-/**
-	@function
-	@param enableMotor {Boolean}
-	@param targetVelocity {Number}
-	@param maxMotorImpulse {Number}
+	@param {Boolean} enableMotor
+	@param {Number} targetVelocity
+	@param {Number} maxMotorImpulse
 */
 Ammo.btHingeConstraint.prototype.enableAngularMotor = function(enableMotor, targetVelocity, maxMotorImpulse) {};
 /**
 	@function
-	@param angularOnly {Boolean}
+	@param {Boolean} angularOnly
 */
 Ammo.btHingeConstraint.prototype.setAngularOnly = function(angularOnly) {};
 /**
 	@function
-	@param enableMotor {Boolean}
+	@param {Boolean} enableMotor
 */
 Ammo.btHingeConstraint.prototype.enableMotor = function(enableMotor) {};
 /**
 	@function
-	@param maxMotorImpulse {Number}
+	@param {Number} maxMotorImpulse
 */
 Ammo.btHingeConstraint.prototype.setMaxMotorImpulse = function(maxMotorImpulse) {};
 /**
 	@function
-	@param targetAngle {Number}
-	@param dt {Number}
+	@param {Number} targetAngle
+	@param {Number} dt
 */
 Ammo.btHingeConstraint.prototype.setMotorTarget = function(targetAngle, dt) {};
 /**
 	@function
-	@param needsFeedback {Boolean}
+	@param {Boolean} needsFeedback
 */
 Ammo.btHingeConstraint.prototype.enableFeedback = function(needsFeedback) {};
 /**
@@ -2768,51 +2689,43 @@ Ammo.btHingeConstraint.prototype.getBreakingImpulseThreshold = function() {
 };
 /**
 	@function
-	@param threshold {Number}
+	@param {Number} threshold
 */
 Ammo.btHingeConstraint.prototype.setBreakingImpulseThreshold = function(threshold) {};
 
 /**
 	@constructor
 	@implements Ammo.btTypedConstraint
-	@param rbA {Ammo.btRigidBody}
-	@param rbB {Ammo.btRigidBody}
-	@param frameInA {Ammo.btTransform}
-	@param frameInB {Ammo.btTransform}
-	@param useLinearReferenceFrameA {Boolean}
+	@param {Ammo.btRigidBody} rbA
+	@param {Ammo.btRigidBody} rbB
+	@param {Ammo.btTransform} [frameInA]
+	@param {Ammo.btTransform} [frameInB]
+	@param {Boolean} [useLinearReferenceFrameA]
 */
 Ammo.btSliderConstraint = function(rbA, rbB, frameInA, frameInB, useLinearReferenceFrameA) {};
 /**
-	@constructor
-	@implements Ammo.btTypedConstraint
-	@param rbB {Ammo.btRigidBody}
-	@param frameInB {Ammo.btTransform}
-	@param useLinearReferenceFrameA {Boolean}
-*/
-Ammo.btSliderConstraint = function(rbB, frameInB, useLinearReferenceFrameA) {};
-/**
 	@function
-	@param lowerLimit {Number}
+	@param {Number} lowerLimit
 */
 Ammo.btSliderConstraint.prototype.setLowerLinLimit = function(lowerLimit) {};
 /**
 	@function
-	@param upperLimit {Number}
+	@param {Number} upperLimit
 */
 Ammo.btSliderConstraint.prototype.setUpperLinLimit = function(upperLimit) {};
 /**
 	@function
-	@param lowerAngLimit {Number}
+	@param {Number} lowerAngLimit
 */
 Ammo.btSliderConstraint.prototype.setLowerAngLimit = function(lowerAngLimit) {};
 /**
 	@function
-	@param upperAngLimit {Number}
+	@param {Number} upperAngLimit
 */
 Ammo.btSliderConstraint.prototype.setUpperAngLimit = function(upperAngLimit) {};
 /**
 	@function
-	@param needsFeedback {Boolean}
+	@param {Boolean} needsFeedback
 */
 Ammo.btSliderConstraint.prototype.enableFeedback = function(needsFeedback) {};
 /**
@@ -2824,7 +2737,7 @@ Ammo.btSliderConstraint.prototype.getBreakingImpulseThreshold = function() {
 };
 /**
 	@function
-	@param threshold {Number}
+	@param {Number} threshold
 */
 Ammo.btSliderConstraint.prototype.setBreakingImpulseThreshold = function(threshold) {};
 
@@ -2838,7 +2751,7 @@ Ammo.btDispatcherInfo.prototype.get_m_timeStep = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btDispatcherInfo.prototype.set_m_timeStep = function(value) {};
 /**
@@ -2850,7 +2763,7 @@ Ammo.btDispatcherInfo.prototype.get_m_stepCount = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btDispatcherInfo.prototype.set_m_stepCount = function(value) {};
 /**
@@ -2862,7 +2775,7 @@ Ammo.btDispatcherInfo.prototype.get_m_dispatchFunc = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btDispatcherInfo.prototype.set_m_dispatchFunc = function(value) {};
 /**
@@ -2874,7 +2787,7 @@ Ammo.btDispatcherInfo.prototype.get_m_timeOfImpact = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btDispatcherInfo.prototype.set_m_timeOfImpact = function(value) {};
 /**
@@ -2886,7 +2799,7 @@ Ammo.btDispatcherInfo.prototype.get_m_useContinuous = function() {
 };
 /**
 	@function
-	@param value {Boolean}
+	@param {Boolean} value
 */
 Ammo.btDispatcherInfo.prototype.set_m_useContinuous = function(value) {};
 /**
@@ -2898,7 +2811,7 @@ Ammo.btDispatcherInfo.prototype.get_m_enableSatConvex = function() {
 };
 /**
 	@function
-	@param value {Boolean}
+	@param {Boolean} value
 */
 Ammo.btDispatcherInfo.prototype.set_m_enableSatConvex = function(value) {};
 /**
@@ -2910,7 +2823,7 @@ Ammo.btDispatcherInfo.prototype.get_m_enableSPU = function() {
 };
 /**
 	@function
-	@param value {Boolean}
+	@param {Boolean} value
 */
 Ammo.btDispatcherInfo.prototype.set_m_enableSPU = function(value) {};
 /**
@@ -2922,7 +2835,7 @@ Ammo.btDispatcherInfo.prototype.get_m_useEpa = function() {
 };
 /**
 	@function
-	@param value {Boolean}
+	@param {Boolean} value
 */
 Ammo.btDispatcherInfo.prototype.set_m_useEpa = function(value) {};
 /**
@@ -2934,7 +2847,7 @@ Ammo.btDispatcherInfo.prototype.get_m_allowedCcdPenetration = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btDispatcherInfo.prototype.set_m_allowedCcdPenetration = function(value) {};
 /**
@@ -2946,7 +2859,7 @@ Ammo.btDispatcherInfo.prototype.get_m_useConvexConservativeDistanceUtil = functi
 };
 /**
 	@function
-	@param value {Boolean}
+	@param {Boolean} value
 */
 Ammo.btDispatcherInfo.prototype.set_m_useConvexConservativeDistanceUtil = function(value) {};
 /**
@@ -2958,7 +2871,7 @@ Ammo.btDispatcherInfo.prototype.get_m_convexConservativeDistanceThreshold = func
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btDispatcherInfo.prototype.set_m_convexConservativeDistanceThreshold = function(value) {};
 
@@ -2971,9 +2884,9 @@ Ammo.btCollisionWorld.prototype.getDispatcher = function() {
 };
 /**
 	@function
-	@param rayFromWorld {Ammo.btVector3}
-	@param rayToWorld {Ammo.btVector3}
-	@param resultCallback {Ammo.RayResultCallback}
+	@param {Ammo.btVector3} rayFromWorld
+	@param {Ammo.btVector3} rayToWorld
+	@param {Ammo.RayResultCallback} resultCallback
 */
 Ammo.btCollisionWorld.prototype.rayTest = function(rayFromWorld, rayToWorld, resultCallback) {};
 /**
@@ -2992,9 +2905,9 @@ Ammo.btCollisionWorld.prototype.getDispatchInfo = function() {
 };
 /**
 	@function
-	@param collisionObject {Ammo.btCollisionObject}
-	@param [collisionFilterGroup] {Number}
-	@param [collisionFilterMask] {Number}
+	@param {Ammo.btCollisionObject} collisionObject
+	@param {Number} [collisionFilterGroup]
+	@param {Number} [collisionFilterMask]
 */
 Ammo.btCollisionWorld.prototype.addCollisionObject = function(collisionObject, collisionFilterGroup, collisionFilterMask) {};
 /**
@@ -3006,24 +2919,24 @@ Ammo.btCollisionWorld.prototype.getBroadphase = function() {
 };
 /**
 	@function
-	@param castShape {Ammo.btConvexShape}
-	@param from {Ammo.btTransform}
-	@param to {Ammo.btTransform}
-	@param resultCallback {Ammo.ConvexResultCallback}
-	@param allowedCcdPenetration {Number}
+	@param {Ammo.btConvexShape} castShape
+	@param {Ammo.btTransform} from
+	@param {Ammo.btTransform} to
+	@param {Ammo.ConvexResultCallback} resultCallback
+	@param {Number} allowedCcdPenetration
 */
 Ammo.btCollisionWorld.prototype.convexSweepTest = function(castShape, from, to, resultCallback, allowedCcdPenetration) {};
 /**
 	@function
-	@param colObjA {Ammo.btCollisionObject}
-	@param colObjB {Ammo.btCollisionObject}
-	@param resultCallback {Ammo.ContactResultCallback}
+	@param {Ammo.btCollisionObject} colObjA
+	@param {Ammo.btCollisionObject} colObjB
+	@param {Ammo.ContactResultCallback} resultCallback
 */
 Ammo.btCollisionWorld.prototype.contactPairTest = function(colObjA, colObjB, resultCallback) {};
 /**
 	@function
-	@param colObj {Ammo.btCollisionObject}
-	@param resultCallback {Ammo.ContactResultCallback}
+	@param {Ammo.btCollisionObject} colObj
+	@param {Ammo.ContactResultCallback} resultCallback
 */
 Ammo.btCollisionWorld.prototype.contactTest = function(colObj, resultCallback) {};
 
@@ -3036,7 +2949,7 @@ Ammo.btContactSolverInfo.prototype.get_m_splitImpulse = function() {
 };
 /**
 	@function
-	@param value {Boolean}
+	@param {Boolean} value
 */
 Ammo.btContactSolverInfo.prototype.set_m_splitImpulse = function(value) {};
 /**
@@ -3048,18 +2961,18 @@ Ammo.btContactSolverInfo.prototype.get_m_splitImpulsePenetrationThreshold = func
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btContactSolverInfo.prototype.set_m_splitImpulsePenetrationThreshold = function(value) {};
 
 /**
 	@function
-	@param action {Ammo.btActionInterface}
+	@param {Ammo.btActionInterface} action
 */
 Ammo.btDynamicsWorld.prototype.addAction = function(action) {};
 /**
 	@function
-	@param action {Ammo.btActionInterface}
+	@param {Ammo.btActionInterface} action
 */
 Ammo.btDynamicsWorld.prototype.removeAction = function(action) {};
 /**
@@ -3078,9 +2991,9 @@ Ammo.btDynamicsWorld.prototype.getDispatcher = function() {
 };
 /**
 	@function
-	@param rayFromWorld {Ammo.btVector3}
-	@param rayToWorld {Ammo.btVector3}
-	@param resultCallback {Ammo.RayResultCallback}
+	@param {Ammo.btVector3} rayFromWorld
+	@param {Ammo.btVector3} rayToWorld
+	@param {Ammo.RayResultCallback} resultCallback
 */
 Ammo.btDynamicsWorld.prototype.rayTest = function(rayFromWorld, rayToWorld, resultCallback) {};
 /**
@@ -3099,9 +3012,9 @@ Ammo.btDynamicsWorld.prototype.getDispatchInfo = function() {
 };
 /**
 	@function
-	@param collisionObject {Ammo.btCollisionObject}
-	@param [collisionFilterGroup] {Number}
-	@param [collisionFilterMask] {Number}
+	@param {Ammo.btCollisionObject} collisionObject
+	@param {Number} [collisionFilterGroup]
+	@param {Number} [collisionFilterMask]
 */
 Ammo.btDynamicsWorld.prototype.addCollisionObject = function(collisionObject, collisionFilterGroup, collisionFilterMask) {};
 /**
@@ -3113,39 +3026,39 @@ Ammo.btDynamicsWorld.prototype.getBroadphase = function() {
 };
 /**
 	@function
-	@param castShape {Ammo.btConvexShape}
-	@param from {Ammo.btTransform}
-	@param to {Ammo.btTransform}
-	@param resultCallback {Ammo.ConvexResultCallback}
-	@param allowedCcdPenetration {Number}
+	@param {Ammo.btConvexShape} castShape
+	@param {Ammo.btTransform} from
+	@param {Ammo.btTransform} to
+	@param {Ammo.ConvexResultCallback} resultCallback
+	@param {Number} allowedCcdPenetration
 */
 Ammo.btDynamicsWorld.prototype.convexSweepTest = function(castShape, from, to, resultCallback, allowedCcdPenetration) {};
 /**
 	@function
-	@param colObjA {Ammo.btCollisionObject}
-	@param colObjB {Ammo.btCollisionObject}
-	@param resultCallback {Ammo.ContactResultCallback}
+	@param {Ammo.btCollisionObject} colObjA
+	@param {Ammo.btCollisionObject} colObjB
+	@param {Ammo.ContactResultCallback} resultCallback
 */
 Ammo.btDynamicsWorld.prototype.contactPairTest = function(colObjA, colObjB, resultCallback) {};
 /**
 	@function
-	@param colObj {Ammo.btCollisionObject}
-	@param resultCallback {Ammo.ContactResultCallback}
+	@param {Ammo.btCollisionObject} colObj
+	@param {Ammo.ContactResultCallback} resultCallback
 */
 Ammo.btDynamicsWorld.prototype.contactTest = function(colObj, resultCallback) {};
 
 /**
 	@constructor
 	@implements Ammo.btDynamicsWorld
-	@param dispatcher {Ammo.btDispatcher}
-	@param pairCache {Ammo.btBroadphaseInterface}
-	@param constraintSolver {Ammo.btConstraintSolver}
-	@param collisionConfiguration {Ammo.btCollisionConfiguration}
+	@param {Ammo.btDispatcher} dispatcher
+	@param {Ammo.btBroadphaseInterface} pairCache
+	@param {Ammo.btConstraintSolver} constraintSolver
+	@param {Ammo.btCollisionConfiguration} collisionConfiguration
 */
 Ammo.btDiscreteDynamicsWorld = function(dispatcher, pairCache, constraintSolver, collisionConfiguration) {};
 /**
 	@function
-	@param gravity {Ammo.btVector3}
+	@param {Ammo.btVector3} gravity
 */
 Ammo.btDiscreteDynamicsWorld.prototype.setGravity = function(gravity) {};
 /**
@@ -3157,37 +3070,32 @@ Ammo.btDiscreteDynamicsWorld.prototype.getGravity = function() {
 };
 /**
 	@function
-	@param body {Ammo.btRigidBody}
-*/
-Ammo.btDiscreteDynamicsWorld.prototype.addRigidBody = function(body) {};
-/**
-	@function
-	@param body {Ammo.btRigidBody}
-	@param group {Number}
-	@param mask {Number}
+	@param {Ammo.btRigidBody} [body]
+	@param {Number} [group]
+	@param {Number} [mask]
 */
 Ammo.btDiscreteDynamicsWorld.prototype.addRigidBody = function(body, group, mask) {};
 /**
 	@function
-	@param body {Ammo.btRigidBody}
+	@param {Ammo.btRigidBody} body
 */
 Ammo.btDiscreteDynamicsWorld.prototype.removeRigidBody = function(body) {};
 /**
 	@function
-	@param constraint {Ammo.btTypedConstraint}
-	@param [disableCollisionsBetweenLinkedBodies] {Boolean}
+	@param {Ammo.btTypedConstraint} constraint
+	@param {Boolean} [disableCollisionsBetweenLinkedBodies]
 */
 Ammo.btDiscreteDynamicsWorld.prototype.addConstraint = function(constraint, disableCollisionsBetweenLinkedBodies) {};
 /**
 	@function
-	@param constraint {Ammo.btTypedConstraint}
+	@param {Ammo.btTypedConstraint} constraint
 */
 Ammo.btDiscreteDynamicsWorld.prototype.removeConstraint = function(constraint) {};
 /**
 	@function
-	@param timeStep {Number}
-	@param [maxSubSteps] {Number}
-	@param [fixedTimeStep] {Number}
+	@param {Number} timeStep
+	@param {Number} [maxSubSteps]
+	@param {Number} [fixedTimeStep]
 	@return {Number}
 */
 Ammo.btDiscreteDynamicsWorld.prototype.stepSimulation = function(timeStep, maxSubSteps, fixedTimeStep) {
@@ -3195,12 +3103,12 @@ Ammo.btDiscreteDynamicsWorld.prototype.stepSimulation = function(timeStep, maxSu
 };
 /**
 	@function
-	@param action {Ammo.btActionInterface}
+	@param {Ammo.btActionInterface} action
 */
 Ammo.btDiscreteDynamicsWorld.prototype.addAction = function(action) {};
 /**
 	@function
-	@param action {Ammo.btActionInterface}
+	@param {Ammo.btActionInterface} action
 */
 Ammo.btDiscreteDynamicsWorld.prototype.removeAction = function(action) {};
 /**
@@ -3219,9 +3127,9 @@ Ammo.btDiscreteDynamicsWorld.prototype.getDispatcher = function() {
 };
 /**
 	@function
-	@param rayFromWorld {Ammo.btVector3}
-	@param rayToWorld {Ammo.btVector3}
-	@param resultCallback {Ammo.RayResultCallback}
+	@param {Ammo.btVector3} rayFromWorld
+	@param {Ammo.btVector3} rayToWorld
+	@param {Ammo.RayResultCallback} resultCallback
 */
 Ammo.btDiscreteDynamicsWorld.prototype.rayTest = function(rayFromWorld, rayToWorld, resultCallback) {};
 /**
@@ -3240,9 +3148,9 @@ Ammo.btDiscreteDynamicsWorld.prototype.getDispatchInfo = function() {
 };
 /**
 	@function
-	@param collisionObject {Ammo.btCollisionObject}
-	@param [collisionFilterGroup] {Number}
-	@param [collisionFilterMask] {Number}
+	@param {Ammo.btCollisionObject} collisionObject
+	@param {Number} [collisionFilterGroup]
+	@param {Number} [collisionFilterMask]
 */
 Ammo.btDiscreteDynamicsWorld.prototype.addCollisionObject = function(collisionObject, collisionFilterGroup, collisionFilterMask) {};
 /**
@@ -3254,24 +3162,24 @@ Ammo.btDiscreteDynamicsWorld.prototype.getBroadphase = function() {
 };
 /**
 	@function
-	@param castShape {Ammo.btConvexShape}
-	@param from {Ammo.btTransform}
-	@param to {Ammo.btTransform}
-	@param resultCallback {Ammo.ConvexResultCallback}
-	@param allowedCcdPenetration {Number}
+	@param {Ammo.btConvexShape} castShape
+	@param {Ammo.btTransform} from
+	@param {Ammo.btTransform} to
+	@param {Ammo.ConvexResultCallback} resultCallback
+	@param {Number} allowedCcdPenetration
 */
 Ammo.btDiscreteDynamicsWorld.prototype.convexSweepTest = function(castShape, from, to, resultCallback, allowedCcdPenetration) {};
 /**
 	@function
-	@param colObjA {Ammo.btCollisionObject}
-	@param colObjB {Ammo.btCollisionObject}
-	@param resultCallback {Ammo.ContactResultCallback}
+	@param {Ammo.btCollisionObject} colObjA
+	@param {Ammo.btCollisionObject} colObjB
+	@param {Ammo.ContactResultCallback} resultCallback
 */
 Ammo.btDiscreteDynamicsWorld.prototype.contactPairTest = function(colObjA, colObjB, resultCallback) {};
 /**
 	@function
-	@param colObj {Ammo.btCollisionObject}
-	@param resultCallback {Ammo.ContactResultCallback}
+	@param {Ammo.btCollisionObject} colObj
+	@param {Ammo.ContactResultCallback} resultCallback
 */
 Ammo.btDiscreteDynamicsWorld.prototype.contactTest = function(colObj, resultCallback) {};
 
@@ -3288,7 +3196,7 @@ Ammo.btVehicleTuning.prototype.get_m_suspensionStiffness = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btVehicleTuning.prototype.set_m_suspensionStiffness = function(value) {};
 /**
@@ -3300,7 +3208,7 @@ Ammo.btVehicleTuning.prototype.get_m_suspensionCompression = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btVehicleTuning.prototype.set_m_suspensionCompression = function(value) {};
 /**
@@ -3312,7 +3220,7 @@ Ammo.btVehicleTuning.prototype.get_m_suspensionDamping = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btVehicleTuning.prototype.set_m_suspensionDamping = function(value) {};
 /**
@@ -3324,7 +3232,7 @@ Ammo.btVehicleTuning.prototype.get_m_maxSuspensionTravelCm = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btVehicleTuning.prototype.set_m_maxSuspensionTravelCm = function(value) {};
 /**
@@ -3336,7 +3244,7 @@ Ammo.btVehicleTuning.prototype.get_m_frictionSlip = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btVehicleTuning.prototype.set_m_frictionSlip = function(value) {};
 /**
@@ -3348,7 +3256,7 @@ Ammo.btVehicleTuning.prototype.get_m_maxSuspensionForce = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btVehicleTuning.prototype.set_m_maxSuspensionForce = function(value) {};
 
@@ -3361,7 +3269,7 @@ Ammo.btVehicleRaycasterResult.prototype.get_m_hitPointInWorld = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.btVehicleRaycasterResult.prototype.set_m_hitPointInWorld = function(value) {};
 /**
@@ -3373,7 +3281,7 @@ Ammo.btVehicleRaycasterResult.prototype.get_m_hitNormalInWorld = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.btVehicleRaycasterResult.prototype.set_m_hitNormalInWorld = function(value) {};
 /**
@@ -3385,29 +3293,29 @@ Ammo.btVehicleRaycasterResult.prototype.get_m_distFraction = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btVehicleRaycasterResult.prototype.set_m_distFraction = function(value) {};
 
 /**
 	@function
-	@param from {Ammo.btVector3}
-	@param to {Ammo.btVector3}
-	@param result {Ammo.btVehicleRaycasterResult}
+	@param {Ammo.btVector3} from
+	@param {Ammo.btVector3} to
+	@param {Ammo.btVehicleRaycasterResult} result
 */
 Ammo.btVehicleRaycaster.prototype.castRay = function(from, to, result) {};
 
 /**
 	@constructor
 	@implements Ammo.btVehicleRaycaster
-	@param world {Ammo.btDynamicsWorld}
+	@param {Ammo.btDynamicsWorld} world
 */
 Ammo.btDefaultVehicleRaycaster = function(world) {};
 /**
 	@function
-	@param from {Ammo.btVector3}
-	@param to {Ammo.btVector3}
-	@param result {Ammo.btVehicleRaycasterResult}
+	@param {Ammo.btVector3} from
+	@param {Ammo.btVector3} to
+	@param {Ammo.btVehicleRaycasterResult} result
 */
 Ammo.btDefaultVehicleRaycaster.prototype.castRay = function(from, to, result) {};
 
@@ -3420,7 +3328,7 @@ Ammo.RaycastInfo.prototype.get_m_contactNormalWS = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.RaycastInfo.prototype.set_m_contactNormalWS = function(value) {};
 /**
@@ -3432,7 +3340,7 @@ Ammo.RaycastInfo.prototype.get_m_contactPointWS = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.RaycastInfo.prototype.set_m_contactPointWS = function(value) {};
 /**
@@ -3444,7 +3352,7 @@ Ammo.RaycastInfo.prototype.get_m_suspensionLength = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.RaycastInfo.prototype.set_m_suspensionLength = function(value) {};
 /**
@@ -3456,7 +3364,7 @@ Ammo.RaycastInfo.prototype.get_m_hardPointWS = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.RaycastInfo.prototype.set_m_hardPointWS = function(value) {};
 /**
@@ -3468,7 +3376,7 @@ Ammo.RaycastInfo.prototype.get_m_wheelDirectionWS = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.RaycastInfo.prototype.set_m_wheelDirectionWS = function(value) {};
 /**
@@ -3480,7 +3388,7 @@ Ammo.RaycastInfo.prototype.get_m_wheelAxleWS = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.RaycastInfo.prototype.set_m_wheelAxleWS = function(value) {};
 /**
@@ -3492,7 +3400,7 @@ Ammo.RaycastInfo.prototype.get_m_isInContact = function() {
 };
 /**
 	@function
-	@param value {Boolean}
+	@param {Boolean} value
 */
 Ammo.RaycastInfo.prototype.set_m_isInContact = function(value) {};
 /**
@@ -3504,7 +3412,7 @@ Ammo.RaycastInfo.prototype.get_m_groundObject = function() {
 };
 /**
 	@function
-	@param value {*}
+	@param {*} value
 */
 Ammo.RaycastInfo.prototype.set_m_groundObject = function(value) {};
 
@@ -3517,7 +3425,7 @@ Ammo.btWheelInfoConstructionInfo.prototype.get_m_chassisConnectionCS = function(
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.btWheelInfoConstructionInfo.prototype.set_m_chassisConnectionCS = function(value) {};
 /**
@@ -3529,7 +3437,7 @@ Ammo.btWheelInfoConstructionInfo.prototype.get_m_wheelDirectionCS = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.btWheelInfoConstructionInfo.prototype.set_m_wheelDirectionCS = function(value) {};
 /**
@@ -3541,7 +3449,7 @@ Ammo.btWheelInfoConstructionInfo.prototype.get_m_wheelAxleCS = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.btWheelInfoConstructionInfo.prototype.set_m_wheelAxleCS = function(value) {};
 /**
@@ -3553,7 +3461,7 @@ Ammo.btWheelInfoConstructionInfo.prototype.get_m_suspensionRestLength = function
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfoConstructionInfo.prototype.set_m_suspensionRestLength = function(value) {};
 /**
@@ -3565,7 +3473,7 @@ Ammo.btWheelInfoConstructionInfo.prototype.get_m_maxSuspensionTravelCm = functio
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfoConstructionInfo.prototype.set_m_maxSuspensionTravelCm = function(value) {};
 /**
@@ -3577,7 +3485,7 @@ Ammo.btWheelInfoConstructionInfo.prototype.get_m_wheelRadius = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfoConstructionInfo.prototype.set_m_wheelRadius = function(value) {};
 /**
@@ -3589,7 +3497,7 @@ Ammo.btWheelInfoConstructionInfo.prototype.get_m_suspensionStiffness = function(
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfoConstructionInfo.prototype.set_m_suspensionStiffness = function(value) {};
 /**
@@ -3601,7 +3509,7 @@ Ammo.btWheelInfoConstructionInfo.prototype.get_m_wheelsDampingCompression = func
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfoConstructionInfo.prototype.set_m_wheelsDampingCompression = function(value) {};
 /**
@@ -3613,7 +3521,7 @@ Ammo.btWheelInfoConstructionInfo.prototype.get_m_wheelsDampingRelaxation = funct
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfoConstructionInfo.prototype.set_m_wheelsDampingRelaxation = function(value) {};
 /**
@@ -3625,7 +3533,7 @@ Ammo.btWheelInfoConstructionInfo.prototype.get_m_frictionSlip = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfoConstructionInfo.prototype.set_m_frictionSlip = function(value) {};
 /**
@@ -3637,7 +3545,7 @@ Ammo.btWheelInfoConstructionInfo.prototype.get_m_maxSuspensionForce = function()
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfoConstructionInfo.prototype.set_m_maxSuspensionForce = function(value) {};
 /**
@@ -3649,7 +3557,7 @@ Ammo.btWheelInfoConstructionInfo.prototype.get_m_bIsFrontWheel = function() {
 };
 /**
 	@function
-	@param value {Boolean}
+	@param {Boolean} value
 */
 Ammo.btWheelInfoConstructionInfo.prototype.set_m_bIsFrontWheel = function(value) {};
 
@@ -3662,7 +3570,7 @@ Ammo.btWheelInfo.prototype.get_m_suspensionStiffness = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfo.prototype.set_m_suspensionStiffness = function(value) {};
 /**
@@ -3674,7 +3582,7 @@ Ammo.btWheelInfo.prototype.get_m_frictionSlip = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfo.prototype.set_m_frictionSlip = function(value) {};
 /**
@@ -3686,7 +3594,7 @@ Ammo.btWheelInfo.prototype.get_m_engineForce = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfo.prototype.set_m_engineForce = function(value) {};
 /**
@@ -3698,7 +3606,7 @@ Ammo.btWheelInfo.prototype.get_m_rollInfluence = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfo.prototype.set_m_rollInfluence = function(value) {};
 /**
@@ -3710,7 +3618,7 @@ Ammo.btWheelInfo.prototype.get_m_suspensionRestLength1 = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfo.prototype.set_m_suspensionRestLength1 = function(value) {};
 /**
@@ -3722,7 +3630,7 @@ Ammo.btWheelInfo.prototype.get_m_wheelsRadius = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfo.prototype.set_m_wheelsRadius = function(value) {};
 /**
@@ -3734,7 +3642,7 @@ Ammo.btWheelInfo.prototype.get_m_wheelsDampingCompression = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfo.prototype.set_m_wheelsDampingCompression = function(value) {};
 /**
@@ -3746,7 +3654,7 @@ Ammo.btWheelInfo.prototype.get_m_wheelsDampingRelaxation = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfo.prototype.set_m_wheelsDampingRelaxation = function(value) {};
 /**
@@ -3758,7 +3666,7 @@ Ammo.btWheelInfo.prototype.get_m_steering = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfo.prototype.set_m_steering = function(value) {};
 /**
@@ -3770,7 +3678,7 @@ Ammo.btWheelInfo.prototype.get_m_maxSuspensionForce = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfo.prototype.set_m_maxSuspensionForce = function(value) {};
 /**
@@ -3782,7 +3690,7 @@ Ammo.btWheelInfo.prototype.get_m_maxSuspensionTravelCm = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfo.prototype.set_m_maxSuspensionTravelCm = function(value) {};
 /**
@@ -3794,7 +3702,7 @@ Ammo.btWheelInfo.prototype.get_m_wheelsSuspensionForce = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfo.prototype.set_m_wheelsSuspensionForce = function(value) {};
 /**
@@ -3806,7 +3714,7 @@ Ammo.btWheelInfo.prototype.get_m_bIsFrontWheel = function() {
 };
 /**
 	@function
-	@param value {Boolean}
+	@param {Boolean} value
 */
 Ammo.btWheelInfo.prototype.set_m_bIsFrontWheel = function(value) {};
 /**
@@ -3818,7 +3726,7 @@ Ammo.btWheelInfo.prototype.get_m_raycastInfo = function() {
 };
 /**
 	@function
-	@param value {Ammo.RaycastInfo}
+	@param {Ammo.RaycastInfo} value
 */
 Ammo.btWheelInfo.prototype.set_m_raycastInfo = function(value) {};
 /**
@@ -3830,12 +3738,12 @@ Ammo.btWheelInfo.prototype.get_m_chassisConnectionPointCS = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.btWheelInfo.prototype.set_m_chassisConnectionPointCS = function(value) {};
 /**
 	@constructor
-	@param ci {Ammo.btWheelInfoConstructionInfo}
+	@param {Ammo.btWheelInfoConstructionInfo} ci
 */
 Ammo.btWheelInfo = function(ci) {};
 /**
@@ -3847,8 +3755,8 @@ Ammo.btWheelInfo.prototype.getSuspensionRestLength = function() {
 };
 /**
 	@function
-	@param chassis {Ammo.btRigidBody}
-	@param raycastInfo {Ammo.RaycastInfo}
+	@param {Ammo.btRigidBody} chassis
+	@param {Ammo.RaycastInfo} raycastInfo
 */
 Ammo.btWheelInfo.prototype.updateWheel = function(chassis, raycastInfo) {};
 /**
@@ -3860,7 +3768,7 @@ Ammo.btWheelInfo.prototype.get_m_worldTransform = function() {
 };
 /**
 	@function
-	@param value {Ammo.btTransform}
+	@param {Ammo.btTransform} value
 */
 Ammo.btWheelInfo.prototype.set_m_worldTransform = function(value) {};
 /**
@@ -3872,7 +3780,7 @@ Ammo.btWheelInfo.prototype.get_m_wheelDirectionCS = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.btWheelInfo.prototype.set_m_wheelDirectionCS = function(value) {};
 /**
@@ -3884,7 +3792,7 @@ Ammo.btWheelInfo.prototype.get_m_wheelAxleCS = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.btWheelInfo.prototype.set_m_wheelAxleCS = function(value) {};
 /**
@@ -3896,7 +3804,7 @@ Ammo.btWheelInfo.prototype.get_m_rotation = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfo.prototype.set_m_rotation = function(value) {};
 /**
@@ -3908,7 +3816,7 @@ Ammo.btWheelInfo.prototype.get_m_deltaRotation = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfo.prototype.set_m_deltaRotation = function(value) {};
 /**
@@ -3920,7 +3828,7 @@ Ammo.btWheelInfo.prototype.get_m_brake = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfo.prototype.set_m_brake = function(value) {};
 /**
@@ -3932,7 +3840,7 @@ Ammo.btWheelInfo.prototype.get_m_clippedInvContactDotSuspension = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfo.prototype.set_m_clippedInvContactDotSuspension = function(value) {};
 /**
@@ -3944,7 +3852,7 @@ Ammo.btWheelInfo.prototype.get_m_suspensionRelativeVelocity = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfo.prototype.set_m_suspensionRelativeVelocity = function(value) {};
 /**
@@ -3956,71 +3864,71 @@ Ammo.btWheelInfo.prototype.get_m_skidInfo = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btWheelInfo.prototype.set_m_skidInfo = function(value) {};
 
 /**
 	@function
-	@param collisionWorld {Ammo.btCollisionWorld}
-	@param deltaTimeStep {Number}
+	@param {Ammo.btCollisionWorld} collisionWorld
+	@param {Number} deltaTimeStep
 */
 Ammo.btActionInterface.prototype.updateAction = function(collisionWorld, deltaTimeStep) {};
 
 /**
 	@constructor
 	@implements Ammo.btActionInterface
-	@param ghostObject {Ammo.btPairCachingGhostObject}
-	@param convexShape {Ammo.btConvexShape}
-	@param stepHeight {Number}
-	@param [upAxis] {Number}
+	@param {Ammo.btPairCachingGhostObject} ghostObject
+	@param {Ammo.btConvexShape} convexShape
+	@param {Number} stepHeight
+	@param {Number} [upAxis]
 */
 Ammo.btKinematicCharacterController = function(ghostObject, convexShape, stepHeight, upAxis) {};
 /**
 	@function
-	@param axis {Number}
+	@param {Number} axis
 */
 Ammo.btKinematicCharacterController.prototype.setUpAxis = function(axis) {};
 /**
 	@function
-	@param walkDirection {Ammo.btVector3}
+	@param {Ammo.btVector3} walkDirection
 */
 Ammo.btKinematicCharacterController.prototype.setWalkDirection = function(walkDirection) {};
 /**
 	@function
-	@param velocity {Ammo.btVector3}
-	@param timeInterval {Number}
+	@param {Ammo.btVector3} velocity
+	@param {Number} timeInterval
 */
 Ammo.btKinematicCharacterController.prototype.setVelocityForTimeInterval = function(velocity, timeInterval) {};
 /**
 	@function
-	@param origin {Ammo.btVector3}
+	@param {Ammo.btVector3} origin
 */
 Ammo.btKinematicCharacterController.prototype.warp = function(origin) {};
 /**
 	@function
-	@param collisionWorld {Ammo.btCollisionWorld}
+	@param {Ammo.btCollisionWorld} collisionWorld
 */
 Ammo.btKinematicCharacterController.prototype.preStep = function(collisionWorld) {};
 /**
 	@function
-	@param collisionWorld {Ammo.btCollisionWorld}
-	@param dt {Number}
+	@param {Ammo.btCollisionWorld} collisionWorld
+	@param {Number} dt
 */
 Ammo.btKinematicCharacterController.prototype.playerStep = function(collisionWorld, dt) {};
 /**
 	@function
-	@param fallSpeed {Number}
+	@param {Number} fallSpeed
 */
 Ammo.btKinematicCharacterController.prototype.setFallSpeed = function(fallSpeed) {};
 /**
 	@function
-	@param jumpSpeed {Number}
+	@param {Number} jumpSpeed
 */
 Ammo.btKinematicCharacterController.prototype.setJumpSpeed = function(jumpSpeed) {};
 /**
 	@function
-	@param maxJumpHeight {Number}
+	@param {Number} maxJumpHeight
 */
 Ammo.btKinematicCharacterController.prototype.setMaxJumpHeight = function(maxJumpHeight) {};
 /**
@@ -4036,7 +3944,7 @@ Ammo.btKinematicCharacterController.prototype.canJump = function() {
 Ammo.btKinematicCharacterController.prototype.jump = function() {};
 /**
 	@function
-	@param gravity {Number}
+	@param {Number} gravity
 */
 Ammo.btKinematicCharacterController.prototype.setGravity = function(gravity) {};
 /**
@@ -4048,7 +3956,7 @@ Ammo.btKinematicCharacterController.prototype.getGravity = function() {
 };
 /**
 	@function
-	@param slopeRadians {Number}
+	@param {Number} slopeRadians
 */
 Ammo.btKinematicCharacterController.prototype.setMaxSlope = function(slopeRadians) {};
 /**
@@ -4067,7 +3975,7 @@ Ammo.btKinematicCharacterController.prototype.getGhostObject = function() {
 };
 /**
 	@function
-	@param useGhostObjectSweepTest {Boolean}
+	@param {Boolean} useGhostObjectSweepTest
 */
 Ammo.btKinematicCharacterController.prototype.setUseGhostSweepTest = function(useGhostObjectSweepTest) {};
 /**
@@ -4079,34 +3987,34 @@ Ammo.btKinematicCharacterController.prototype.onGround = function() {
 };
 /**
 	@function
-	@param collisionWorld {Ammo.btCollisionWorld}
-	@param deltaTimeStep {Number}
+	@param {Ammo.btCollisionWorld} collisionWorld
+	@param {Number} deltaTimeStep
 */
 Ammo.btKinematicCharacterController.prototype.updateAction = function(collisionWorld, deltaTimeStep) {};
 
 /**
 	@constructor
 	@implements Ammo.btActionInterface
-	@param tuning {Ammo.btVehicleTuning}
-	@param chassis {Ammo.btRigidBody}
-	@param raycaster {Ammo.btVehicleRaycaster}
+	@param {Ammo.btVehicleTuning} tuning
+	@param {Ammo.btRigidBody} chassis
+	@param {Ammo.btVehicleRaycaster} raycaster
 */
 Ammo.btRaycastVehicle = function(tuning, chassis, raycaster) {};
 /**
 	@function
-	@param force {Number}
-	@param wheel {Number}
+	@param {Number} force
+	@param {Number} wheel
 */
 Ammo.btRaycastVehicle.prototype.applyEngineForce = function(force, wheel) {};
 /**
 	@function
-	@param steering {Number}
-	@param wheel {Number}
+	@param {Number} steering
+	@param {Number} wheel
 */
 Ammo.btRaycastVehicle.prototype.setSteeringValue = function(steering, wheel) {};
 /**
 	@function
-	@param wheelIndex {Number}
+	@param {Number} wheelIndex
 	@return {Ammo.btTransform}
 */
 Ammo.btRaycastVehicle.prototype.getWheelTransformWS = function(wheelIndex) {
@@ -4114,19 +4022,19 @@ Ammo.btRaycastVehicle.prototype.getWheelTransformWS = function(wheelIndex) {
 };
 /**
 	@function
-	@param wheelIndex {Number}
-	@param interpolatedTransform {Boolean}
+	@param {Number} wheelIndex
+	@param {Boolean} interpolatedTransform
 */
 Ammo.btRaycastVehicle.prototype.updateWheelTransform = function(wheelIndex, interpolatedTransform) {};
 /**
 	@function
-	@param connectionPointCS0 {Ammo.btVector3}
-	@param wheelDirectionCS0 {Ammo.btVector3}
-	@param wheelAxleCS {Ammo.btVector3}
-	@param suspensionRestLength {Number}
-	@param wheelRadius {Number}
-	@param tuning {Ammo.btVehicleTuning}
-	@param isFrontWheel {Boolean}
+	@param {Ammo.btVector3} connectionPointCS0
+	@param {Ammo.btVector3} wheelDirectionCS0
+	@param {Ammo.btVector3} wheelAxleCS
+	@param {Number} suspensionRestLength
+	@param {Number} wheelRadius
+	@param {Ammo.btVehicleTuning} tuning
+	@param {Boolean} isFrontWheel
 	@return {Ammo.btWheelInfo}
 */
 Ammo.btRaycastVehicle.prototype.addWheel = function(connectionPointCS0, wheelDirectionCS0, wheelAxleCS, suspensionRestLength, wheelRadius, tuning, isFrontWheel) {
@@ -4148,7 +4056,7 @@ Ammo.btRaycastVehicle.prototype.getRigidBody = function() {
 };
 /**
 	@function
-	@param index {Number}
+	@param {Number} index
 	@return {Ammo.btWheelInfo}
 */
 Ammo.btRaycastVehicle.prototype.getWheelInfo = function(index) {
@@ -4156,15 +4064,15 @@ Ammo.btRaycastVehicle.prototype.getWheelInfo = function(index) {
 };
 /**
 	@function
-	@param brake {Number}
-	@param wheelIndex {Number}
+	@param {Number} brake
+	@param {Number} wheelIndex
 */
 Ammo.btRaycastVehicle.prototype.setBrake = function(brake, wheelIndex) {};
 /**
 	@function
-	@param rightIndex {Number}
-	@param upIndex {Number}
-	@param forwardIndex {Number}
+	@param {Number} rightIndex
+	@param {Number} upIndex
+	@param {Number} forwardIndex
 */
 Ammo.btRaycastVehicle.prototype.setCoordinateSystem = function(rightIndex, upIndex, forwardIndex) {};
 /**
@@ -4183,7 +4091,7 @@ Ammo.btRaycastVehicle.prototype.getChassisWorldTransform = function() {
 };
 /**
 	@function
-	@param wheel {Ammo.btWheelInfo}
+	@param {Ammo.btWheelInfo} wheel
 	@return {Number}
 */
 Ammo.btRaycastVehicle.prototype.rayCast = function(wheel) {
@@ -4191,7 +4099,7 @@ Ammo.btRaycastVehicle.prototype.rayCast = function(wheel) {
 };
 /**
 	@function
-	@param step {Number}
+	@param {Number} step
 */
 Ammo.btRaycastVehicle.prototype.updateVehicle = function(step) {};
 /**
@@ -4200,7 +4108,7 @@ Ammo.btRaycastVehicle.prototype.updateVehicle = function(step) {};
 Ammo.btRaycastVehicle.prototype.resetSuspension = function() {};
 /**
 	@function
-	@param wheel {Number}
+	@param {Number} wheel
 	@return {Number}
 */
 Ammo.btRaycastVehicle.prototype.getSteeringValue = function(wheel) {
@@ -4208,23 +4116,23 @@ Ammo.btRaycastVehicle.prototype.getSteeringValue = function(wheel) {
 };
 /**
 	@function
-	@param wheel {Ammo.btWheelInfo}
-	@param [interpolatedTransform] {Boolean}
+	@param {Ammo.btWheelInfo} wheel
+	@param {Boolean} [interpolatedTransform]
 */
 Ammo.btRaycastVehicle.prototype.updateWheelTransformsWS = function(wheel, interpolatedTransform) {};
 /**
 	@function
-	@param pitch {Number}
+	@param {Number} pitch
 */
 Ammo.btRaycastVehicle.prototype.setPitchControl = function(pitch) {};
 /**
 	@function
-	@param deltaTime {Number}
+	@param {Number} deltaTime
 */
 Ammo.btRaycastVehicle.prototype.updateSuspension = function(deltaTime) {};
 /**
 	@function
-	@param timeStep {Number}
+	@param {Number} timeStep
 */
 Ammo.btRaycastVehicle.prototype.updateFriction = function(timeStep) {};
 /**
@@ -4264,12 +4172,12 @@ Ammo.btRaycastVehicle.prototype.getUserConstraintType = function() {
 };
 /**
 	@function
-	@param userConstraintType {Number}
+	@param {Number} userConstraintType
 */
 Ammo.btRaycastVehicle.prototype.setUserConstraintType = function(userConstraintType) {};
 /**
 	@function
-	@param uid {Number}
+	@param {Number} uid
 */
 Ammo.btRaycastVehicle.prototype.setUserConstraintId = function(uid) {};
 /**
@@ -4281,8 +4189,8 @@ Ammo.btRaycastVehicle.prototype.getUserConstraintId = function() {
 };
 /**
 	@function
-	@param collisionWorld {Ammo.btCollisionWorld}
-	@param deltaTimeStep {Number}
+	@param {Ammo.btCollisionWorld} collisionWorld
+	@param {Number} deltaTimeStep
 */
 Ammo.btRaycastVehicle.prototype.updateAction = function(collisionWorld, deltaTimeStep) {};
 
@@ -4300,7 +4208,7 @@ Ammo.btGhostObject.prototype.getNumOverlappingObjects = function() {
 };
 /**
 	@function
-	@param index {Number}
+	@param {Number} index
 	@return {Ammo.btCollisionObject}
 */
 Ammo.btGhostObject.prototype.getOverlappingObject = function(index) {
@@ -4308,8 +4216,8 @@ Ammo.btGhostObject.prototype.getOverlappingObject = function(index) {
 };
 /**
 	@function
-	@param anisotropicFriction {Ammo.btVector3}
-	@param frictionMode {Number}
+	@param {Ammo.btVector3} anisotropicFriction
+	@param {Number} frictionMode
 */
 Ammo.btGhostObject.prototype.setAnisotropicFriction = function(anisotropicFriction, frictionMode) {};
 /**
@@ -4321,22 +4229,22 @@ Ammo.btGhostObject.prototype.getCollisionShape = function() {
 };
 /**
 	@function
-	@param contactProcessingThreshold {Number}
+	@param {Number} contactProcessingThreshold
 */
 Ammo.btGhostObject.prototype.setContactProcessingThreshold = function(contactProcessingThreshold) {};
 /**
 	@function
-	@param newState {Number}
+	@param {Number} newState
 */
 Ammo.btGhostObject.prototype.setActivationState = function(newState) {};
 /**
 	@function
-	@param newState {Number}
+	@param {Number} newState
 */
 Ammo.btGhostObject.prototype.forceActivationState = function(newState) {};
 /**
 	@function
-	@param [forceActivation] {Boolean}
+	@param {Boolean} [forceActivation]
 */
 Ammo.btGhostObject.prototype.activate = function(forceActivation) {};
 /**
@@ -4355,17 +4263,17 @@ Ammo.btGhostObject.prototype.isKinematicObject = function() {
 };
 /**
 	@function
-	@param rest {Number}
+	@param {Number} rest
 */
 Ammo.btGhostObject.prototype.setRestitution = function(rest) {};
 /**
 	@function
-	@param frict {Number}
+	@param {Number} frict
 */
 Ammo.btGhostObject.prototype.setFriction = function(frict) {};
 /**
 	@function
-	@param frict {Number}
+	@param {Number} frict
 */
 Ammo.btGhostObject.prototype.setRollingFriction = function(frict) {};
 /**
@@ -4384,27 +4292,27 @@ Ammo.btGhostObject.prototype.getCollisionFlags = function() {
 };
 /**
 	@function
-	@param flags {Number}
+	@param {Number} flags
 */
 Ammo.btGhostObject.prototype.setCollisionFlags = function(flags) {};
 /**
 	@function
-	@param worldTrans {Ammo.btTransform}
+	@param {Ammo.btTransform} worldTrans
 */
 Ammo.btGhostObject.prototype.setWorldTransform = function(worldTrans) {};
 /**
 	@function
-	@param collisionShape {Ammo.btCollisionShape}
+	@param {Ammo.btCollisionShape} collisionShape
 */
 Ammo.btGhostObject.prototype.setCollisionShape = function(collisionShape) {};
 /**
 	@function
-	@param ccdMotionThreshold {Number}
+	@param {Number} ccdMotionThreshold
 */
 Ammo.btGhostObject.prototype.setCcdMotionThreshold = function(ccdMotionThreshold) {};
 /**
 	@function
-	@param radius {Number}
+	@param {Number} radius
 */
 Ammo.btGhostObject.prototype.setCcdSweptSphereRadius = function(radius) {};
 /**
@@ -4416,7 +4324,7 @@ Ammo.btGhostObject.prototype.getUserIndex = function() {
 };
 /**
 	@function
-	@param index {Number}
+	@param {Number} index
 */
 Ammo.btGhostObject.prototype.setUserIndex = function(index) {};
 /**
@@ -4428,7 +4336,7 @@ Ammo.btGhostObject.prototype.getUserPointer = function() {
 };
 /**
 	@function
-	@param userPointer {*}
+	@param {*} userPointer
 */
 Ammo.btGhostObject.prototype.setUserPointer = function(userPointer) {};
 
@@ -4451,7 +4359,7 @@ Ammo.btPairCachingGhostObject.prototype.getNumOverlappingObjects = function() {
 };
 /**
 	@function
-	@param index {Number}
+	@param {Number} index
 	@return {Ammo.btCollisionObject}
 */
 Ammo.btPairCachingGhostObject.prototype.getOverlappingObject = function(index) {
@@ -4459,8 +4367,8 @@ Ammo.btPairCachingGhostObject.prototype.getOverlappingObject = function(index) {
 };
 /**
 	@function
-	@param anisotropicFriction {Ammo.btVector3}
-	@param frictionMode {Number}
+	@param {Ammo.btVector3} anisotropicFriction
+	@param {Number} frictionMode
 */
 Ammo.btPairCachingGhostObject.prototype.setAnisotropicFriction = function(anisotropicFriction, frictionMode) {};
 /**
@@ -4472,22 +4380,22 @@ Ammo.btPairCachingGhostObject.prototype.getCollisionShape = function() {
 };
 /**
 	@function
-	@param contactProcessingThreshold {Number}
+	@param {Number} contactProcessingThreshold
 */
 Ammo.btPairCachingGhostObject.prototype.setContactProcessingThreshold = function(contactProcessingThreshold) {};
 /**
 	@function
-	@param newState {Number}
+	@param {Number} newState
 */
 Ammo.btPairCachingGhostObject.prototype.setActivationState = function(newState) {};
 /**
 	@function
-	@param newState {Number}
+	@param {Number} newState
 */
 Ammo.btPairCachingGhostObject.prototype.forceActivationState = function(newState) {};
 /**
 	@function
-	@param [forceActivation] {Boolean}
+	@param {Boolean} [forceActivation]
 */
 Ammo.btPairCachingGhostObject.prototype.activate = function(forceActivation) {};
 /**
@@ -4506,17 +4414,17 @@ Ammo.btPairCachingGhostObject.prototype.isKinematicObject = function() {
 };
 /**
 	@function
-	@param rest {Number}
+	@param {Number} rest
 */
 Ammo.btPairCachingGhostObject.prototype.setRestitution = function(rest) {};
 /**
 	@function
-	@param frict {Number}
+	@param {Number} frict
 */
 Ammo.btPairCachingGhostObject.prototype.setFriction = function(frict) {};
 /**
 	@function
-	@param frict {Number}
+	@param {Number} frict
 */
 Ammo.btPairCachingGhostObject.prototype.setRollingFriction = function(frict) {};
 /**
@@ -4535,27 +4443,27 @@ Ammo.btPairCachingGhostObject.prototype.getCollisionFlags = function() {
 };
 /**
 	@function
-	@param flags {Number}
+	@param {Number} flags
 */
 Ammo.btPairCachingGhostObject.prototype.setCollisionFlags = function(flags) {};
 /**
 	@function
-	@param worldTrans {Ammo.btTransform}
+	@param {Ammo.btTransform} worldTrans
 */
 Ammo.btPairCachingGhostObject.prototype.setWorldTransform = function(worldTrans) {};
 /**
 	@function
-	@param collisionShape {Ammo.btCollisionShape}
+	@param {Ammo.btCollisionShape} collisionShape
 */
 Ammo.btPairCachingGhostObject.prototype.setCollisionShape = function(collisionShape) {};
 /**
 	@function
-	@param ccdMotionThreshold {Number}
+	@param {Number} ccdMotionThreshold
 */
 Ammo.btPairCachingGhostObject.prototype.setCcdMotionThreshold = function(ccdMotionThreshold) {};
 /**
 	@function
-	@param radius {Number}
+	@param {Number} radius
 */
 Ammo.btPairCachingGhostObject.prototype.setCcdSweptSphereRadius = function(radius) {};
 /**
@@ -4567,7 +4475,7 @@ Ammo.btPairCachingGhostObject.prototype.getUserIndex = function() {
 };
 /**
 	@function
-	@param index {Number}
+	@param {Number} index
 */
 Ammo.btPairCachingGhostObject.prototype.setUserIndex = function(index) {};
 /**
@@ -4579,7 +4487,7 @@ Ammo.btPairCachingGhostObject.prototype.getUserPointer = function() {
 };
 /**
 	@function
-	@param userPointer {*}
+	@param {*} userPointer
 */
 Ammo.btPairCachingGhostObject.prototype.setUserPointer = function(userPointer) {};
 
@@ -4601,7 +4509,7 @@ Ammo.btSoftBodyWorldInfo.prototype.get_air_density = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btSoftBodyWorldInfo.prototype.set_air_density = function(value) {};
 /**
@@ -4613,7 +4521,7 @@ Ammo.btSoftBodyWorldInfo.prototype.get_water_density = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btSoftBodyWorldInfo.prototype.set_water_density = function(value) {};
 /**
@@ -4625,7 +4533,7 @@ Ammo.btSoftBodyWorldInfo.prototype.get_water_offset = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btSoftBodyWorldInfo.prototype.set_water_offset = function(value) {};
 /**
@@ -4637,7 +4545,7 @@ Ammo.btSoftBodyWorldInfo.prototype.get_m_maxDisplacement = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.btSoftBodyWorldInfo.prototype.set_m_maxDisplacement = function(value) {};
 /**
@@ -4649,7 +4557,7 @@ Ammo.btSoftBodyWorldInfo.prototype.get_water_normal = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.btSoftBodyWorldInfo.prototype.set_water_normal = function(value) {};
 /**
@@ -4661,7 +4569,7 @@ Ammo.btSoftBodyWorldInfo.prototype.get_m_broadphase = function() {
 };
 /**
 	@function
-	@param value {Ammo.btBroadphaseInterface}
+	@param {Ammo.btBroadphaseInterface} value
 */
 Ammo.btSoftBodyWorldInfo.prototype.set_m_broadphase = function(value) {};
 /**
@@ -4673,7 +4581,7 @@ Ammo.btSoftBodyWorldInfo.prototype.get_m_dispatcher = function() {
 };
 /**
 	@function
-	@param value {Ammo.btDispatcher}
+	@param {Ammo.btDispatcher} value
 */
 Ammo.btSoftBodyWorldInfo.prototype.set_m_dispatcher = function(value) {};
 /**
@@ -4685,7 +4593,7 @@ Ammo.btSoftBodyWorldInfo.prototype.get_m_gravity = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.btSoftBodyWorldInfo.prototype.set_m_gravity = function(value) {};
 
@@ -4698,7 +4606,7 @@ Ammo.Node.prototype.get_m_x = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.Node.prototype.set_m_x = function(value) {};
 /**
@@ -4710,7 +4618,7 @@ Ammo.Node.prototype.get_m_n = function() {
 };
 /**
 	@function
-	@param value {Ammo.btVector3}
+	@param {Ammo.btVector3} value
 */
 Ammo.Node.prototype.set_m_n = function(value) {};
 
@@ -4723,7 +4631,7 @@ Ammo.tNodeArray.prototype.size = function() {
 };
 /**
 	@function
-	@param n {Number}
+	@param {Number} n
 	@return {Ammo.Node}
 */
 Ammo.tNodeArray.prototype.at = function(n) {
@@ -4739,7 +4647,7 @@ Ammo.Material.prototype.get_m_kLST = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Material.prototype.set_m_kLST = function(value) {};
 /**
@@ -4751,7 +4659,7 @@ Ammo.Material.prototype.get_m_kAST = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Material.prototype.set_m_kAST = function(value) {};
 /**
@@ -4763,7 +4671,7 @@ Ammo.Material.prototype.get_m_kVST = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Material.prototype.set_m_kVST = function(value) {};
 /**
@@ -4775,7 +4683,7 @@ Ammo.Material.prototype.get_m_flags = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Material.prototype.set_m_flags = function(value) {};
 
@@ -4788,7 +4696,7 @@ Ammo.tMaterialArray.prototype.size = function() {
 };
 /**
 	@function
-	@param n {Number}
+	@param {Number} n
 	@return {Ammo.Material}
 */
 Ammo.tMaterialArray.prototype.at = function(n) {
@@ -4804,7 +4712,7 @@ Ammo.Config.prototype.get_kVCF = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_kVCF = function(value) {};
 /**
@@ -4816,7 +4724,7 @@ Ammo.Config.prototype.get_kDP = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_kDP = function(value) {};
 /**
@@ -4828,7 +4736,7 @@ Ammo.Config.prototype.get_kDG = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_kDG = function(value) {};
 /**
@@ -4840,7 +4748,7 @@ Ammo.Config.prototype.get_kLF = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_kLF = function(value) {};
 /**
@@ -4852,7 +4760,7 @@ Ammo.Config.prototype.get_kPR = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_kPR = function(value) {};
 /**
@@ -4864,7 +4772,7 @@ Ammo.Config.prototype.get_kVC = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_kVC = function(value) {};
 /**
@@ -4876,7 +4784,7 @@ Ammo.Config.prototype.get_kDF = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_kDF = function(value) {};
 /**
@@ -4888,7 +4796,7 @@ Ammo.Config.prototype.get_kMT = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_kMT = function(value) {};
 /**
@@ -4900,7 +4808,7 @@ Ammo.Config.prototype.get_kCHR = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_kCHR = function(value) {};
 /**
@@ -4912,7 +4820,7 @@ Ammo.Config.prototype.get_kKHR = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_kKHR = function(value) {};
 /**
@@ -4924,7 +4832,7 @@ Ammo.Config.prototype.get_kSHR = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_kSHR = function(value) {};
 /**
@@ -4936,7 +4844,7 @@ Ammo.Config.prototype.get_kAHR = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_kAHR = function(value) {};
 /**
@@ -4948,7 +4856,7 @@ Ammo.Config.prototype.get_kSRHR_CL = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_kSRHR_CL = function(value) {};
 /**
@@ -4960,7 +4868,7 @@ Ammo.Config.prototype.get_kSKHR_CL = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_kSKHR_CL = function(value) {};
 /**
@@ -4972,7 +4880,7 @@ Ammo.Config.prototype.get_kSSHR_CL = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_kSSHR_CL = function(value) {};
 /**
@@ -4984,7 +4892,7 @@ Ammo.Config.prototype.get_kSR_SPLT_CL = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_kSR_SPLT_CL = function(value) {};
 /**
@@ -4996,7 +4904,7 @@ Ammo.Config.prototype.get_kSK_SPLT_CL = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_kSK_SPLT_CL = function(value) {};
 /**
@@ -5008,7 +4916,7 @@ Ammo.Config.prototype.get_kSS_SPLT_CL = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_kSS_SPLT_CL = function(value) {};
 /**
@@ -5020,7 +4928,7 @@ Ammo.Config.prototype.get_maxvolume = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_maxvolume = function(value) {};
 /**
@@ -5032,7 +4940,7 @@ Ammo.Config.prototype.get_timescale = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_timescale = function(value) {};
 /**
@@ -5044,7 +4952,7 @@ Ammo.Config.prototype.get_viterations = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_viterations = function(value) {};
 /**
@@ -5056,7 +4964,7 @@ Ammo.Config.prototype.get_piterations = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_piterations = function(value) {};
 /**
@@ -5068,7 +4976,7 @@ Ammo.Config.prototype.get_diterations = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_diterations = function(value) {};
 /**
@@ -5080,7 +4988,7 @@ Ammo.Config.prototype.get_citerations = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_citerations = function(value) {};
 /**
@@ -5092,17 +5000,17 @@ Ammo.Config.prototype.get_collisions = function() {
 };
 /**
 	@function
-	@param value {Number}
+	@param {Number} value
 */
 Ammo.Config.prototype.set_collisions = function(value) {};
 
 /**
 	@constructor
 	@implements Ammo.btCollisionObject
-	@param worldInfo {Ammo.btSoftBodyWorldInfo}
-	@param node_count {Number}
-	@param x {Ammo.btVector3}
-	@param m {Array<Number>}
+	@param {Ammo.btSoftBodyWorldInfo} worldInfo
+	@param {Number} node_count
+	@param {Ammo.btVector3} x
+	@param {Array<Number>} m
 */
 Ammo.btSoftBody = function(worldInfo, node_count, x, m) {};
 /**
@@ -5114,7 +5022,7 @@ Ammo.btSoftBody.prototype.get_m_cfg = function() {
 };
 /**
 	@function
-	@param value {Ammo.Config}
+	@param {Ammo.Config} value
 */
 Ammo.btSoftBody.prototype.set_m_cfg = function(value) {};
 /**
@@ -5126,7 +5034,7 @@ Ammo.btSoftBody.prototype.get_m_nodes = function() {
 };
 /**
 	@function
-	@param value {Ammo.tNodeArray}
+	@param {Ammo.tNodeArray} value
 */
 Ammo.btSoftBody.prototype.set_m_nodes = function(value) {};
 /**
@@ -5138,13 +5046,13 @@ Ammo.btSoftBody.prototype.get_m_materials = function() {
 };
 /**
 	@function
-	@param value {Ammo.tMaterialArray}
+	@param {Ammo.tMaterialArray} value
 */
 Ammo.btSoftBody.prototype.set_m_materials = function(value) {};
 /**
 	@function
-	@param node0 {Number}
-	@param node1 {Number}
+	@param {Number} node0
+	@param {Number} node1
 	@return {Boolean}
 */
 Ammo.btSoftBody.prototype.checkLink = function(node0, node1) {
@@ -5152,9 +5060,9 @@ Ammo.btSoftBody.prototype.checkLink = function(node0, node1) {
 };
 /**
 	@function
-	@param node0 {Number}
-	@param node1 {Number}
-	@param node2 {Number}
+	@param {Number} node0
+	@param {Number} node1
+	@param {Number} node2
 	@return {Boolean}
 */
 Ammo.btSoftBody.prototype.checkFace = function(node0, node1, node2) {
@@ -5169,41 +5077,41 @@ Ammo.btSoftBody.prototype.appendMaterial = function() {
 };
 /**
 	@function
-	@param x {Ammo.btVector3}
-	@param m {Number}
+	@param {Ammo.btVector3} x
+	@param {Number} m
 */
 Ammo.btSoftBody.prototype.appendNode = function(x, m) {};
 /**
 	@function
-	@param node0 {Number}
-	@param node1 {Number}
-	@param mat {Ammo.Material}
-	@param bcheckexist {Boolean}
+	@param {Number} node0
+	@param {Number} node1
+	@param {Ammo.Material} mat
+	@param {Boolean} bcheckexist
 */
 Ammo.btSoftBody.prototype.appendLink = function(node0, node1, mat, bcheckexist) {};
 /**
 	@function
-	@param node0 {Number}
-	@param node1 {Number}
-	@param node2 {Number}
-	@param mat {Ammo.Material}
+	@param {Number} node0
+	@param {Number} node1
+	@param {Number} node2
+	@param {Ammo.Material} mat
 */
 Ammo.btSoftBody.prototype.appendFace = function(node0, node1, node2, mat) {};
 /**
 	@function
-	@param node0 {Number}
-	@param node1 {Number}
-	@param node2 {Number}
-	@param node3 {Number}
-	@param mat {Ammo.Material}
+	@param {Number} node0
+	@param {Number} node1
+	@param {Number} node2
+	@param {Number} node3
+	@param {Ammo.Material} mat
 */
 Ammo.btSoftBody.prototype.appendTetra = function(node0, node1, node2, node3, mat) {};
 /**
 	@function
-	@param node {Number}
-	@param body {Ammo.btRigidBody}
-	@param disableCollisionBetweenLinkedBodies {Boolean}
-	@param influence {Number}
+	@param {Number} node
+	@param {Ammo.btRigidBody} body
+	@param {Boolean} disableCollisionBetweenLinkedBodies
+	@param {Number} influence
 */
 Ammo.btSoftBody.prototype.appendAnchor = function(node, body, disableCollisionBetweenLinkedBodies, influence) {};
 /**
@@ -5215,40 +5123,40 @@ Ammo.btSoftBody.prototype.getTotalMass = function() {
 };
 /**
 	@function
-	@param mass {Number}
-	@param fromfaces {Boolean}
+	@param {Number} mass
+	@param {Boolean} fromfaces
 */
 Ammo.btSoftBody.prototype.setTotalMass = function(mass, fromfaces) {};
 /**
 	@function
-	@param node {Number}
-	@param mass {Number}
+	@param {Number} node
+	@param {Number} mass
 */
 Ammo.btSoftBody.prototype.setMass = function(node, mass) {};
 /**
 	@function
-	@param trs {Ammo.btTransform}
+	@param {Ammo.btTransform} trs
 */
 Ammo.btSoftBody.prototype.transform = function(trs) {};
 /**
 	@function
-	@param trs {Ammo.btVector3}
+	@param {Ammo.btVector3} trs
 */
 Ammo.btSoftBody.prototype.translate = function(trs) {};
 /**
 	@function
-	@param rot {Ammo.btQuaternion}
+	@param {Ammo.btQuaternion} rot
 */
 Ammo.btSoftBody.prototype.rotate = function(rot) {};
 /**
 	@function
-	@param scl {Ammo.btVector3}
+	@param {Ammo.btVector3} scl
 */
 Ammo.btSoftBody.prototype.scale = function(scl) {};
 /**
 	@function
-	@param k {Number}
-	@param [maxiterations] {Number}
+	@param {Number} k
+	@param {Number} [maxiterations]
 	@return {Number}
 */
 Ammo.btSoftBody.prototype.generateClusters = function(k, maxiterations) {
@@ -5256,7 +5164,7 @@ Ammo.btSoftBody.prototype.generateClusters = function(k, maxiterations) {
 };
 /**
 	@function
-	@param colObj {Ammo.btCollisionObject}
+	@param {Ammo.btCollisionObject} colObj
 	@return {Ammo.btSoftBody}
 */
 Ammo.btSoftBody.prototype.upcast = function(colObj) {
@@ -5264,8 +5172,8 @@ Ammo.btSoftBody.prototype.upcast = function(colObj) {
 };
 /**
 	@function
-	@param anisotropicFriction {Ammo.btVector3}
-	@param frictionMode {Number}
+	@param {Ammo.btVector3} anisotropicFriction
+	@param {Number} frictionMode
 */
 Ammo.btSoftBody.prototype.setAnisotropicFriction = function(anisotropicFriction, frictionMode) {};
 /**
@@ -5277,22 +5185,22 @@ Ammo.btSoftBody.prototype.getCollisionShape = function() {
 };
 /**
 	@function
-	@param contactProcessingThreshold {Number}
+	@param {Number} contactProcessingThreshold
 */
 Ammo.btSoftBody.prototype.setContactProcessingThreshold = function(contactProcessingThreshold) {};
 /**
 	@function
-	@param newState {Number}
+	@param {Number} newState
 */
 Ammo.btSoftBody.prototype.setActivationState = function(newState) {};
 /**
 	@function
-	@param newState {Number}
+	@param {Number} newState
 */
 Ammo.btSoftBody.prototype.forceActivationState = function(newState) {};
 /**
 	@function
-	@param [forceActivation] {Boolean}
+	@param {Boolean} [forceActivation]
 */
 Ammo.btSoftBody.prototype.activate = function(forceActivation) {};
 /**
@@ -5311,17 +5219,17 @@ Ammo.btSoftBody.prototype.isKinematicObject = function() {
 };
 /**
 	@function
-	@param rest {Number}
+	@param {Number} rest
 */
 Ammo.btSoftBody.prototype.setRestitution = function(rest) {};
 /**
 	@function
-	@param frict {Number}
+	@param {Number} frict
 */
 Ammo.btSoftBody.prototype.setFriction = function(frict) {};
 /**
 	@function
-	@param frict {Number}
+	@param {Number} frict
 */
 Ammo.btSoftBody.prototype.setRollingFriction = function(frict) {};
 /**
@@ -5340,27 +5248,27 @@ Ammo.btSoftBody.prototype.getCollisionFlags = function() {
 };
 /**
 	@function
-	@param flags {Number}
+	@param {Number} flags
 */
 Ammo.btSoftBody.prototype.setCollisionFlags = function(flags) {};
 /**
 	@function
-	@param worldTrans {Ammo.btTransform}
+	@param {Ammo.btTransform} worldTrans
 */
 Ammo.btSoftBody.prototype.setWorldTransform = function(worldTrans) {};
 /**
 	@function
-	@param collisionShape {Ammo.btCollisionShape}
+	@param {Ammo.btCollisionShape} collisionShape
 */
 Ammo.btSoftBody.prototype.setCollisionShape = function(collisionShape) {};
 /**
 	@function
-	@param ccdMotionThreshold {Number}
+	@param {Number} ccdMotionThreshold
 */
 Ammo.btSoftBody.prototype.setCcdMotionThreshold = function(ccdMotionThreshold) {};
 /**
 	@function
-	@param radius {Number}
+	@param {Number} radius
 */
 Ammo.btSoftBody.prototype.setCcdSweptSphereRadius = function(radius) {};
 /**
@@ -5372,7 +5280,7 @@ Ammo.btSoftBody.prototype.getUserIndex = function() {
 };
 /**
 	@function
-	@param index {Number}
+	@param {Number} index
 */
 Ammo.btSoftBody.prototype.setUserIndex = function(index) {};
 /**
@@ -5384,20 +5292,20 @@ Ammo.btSoftBody.prototype.getUserPointer = function() {
 };
 /**
 	@function
-	@param userPointer {*}
+	@param {*} userPointer
 */
 Ammo.btSoftBody.prototype.setUserPointer = function(userPointer) {};
 
 /**
 	@constructor
 	@implements Ammo.btDefaultCollisionConfiguration
-	@param [info] {Ammo.btDefaultCollisionConstructionInfo}
+	@param {Ammo.btDefaultCollisionConstructionInfo} [info]
 */
 Ammo.btSoftBodyRigidBodyCollisionConfiguration = function(info) {};
 /**
 	@constructor
 	@implements Ammo.btDefaultCollisionConfiguration
-	@param [info] {Ammo.btDefaultCollisionConstructionInfo}
+	@param {Ammo.btDefaultCollisionConstructionInfo} [info]
 */
 Ammo.btSoftBodyRigidBodyCollisionConfiguration = function(info) {};
 
@@ -5417,7 +5325,7 @@ Ammo.btSoftBodyArray.prototype.size = function() {
 };
 /**
 	@function
-	@param n {Number}
+	@param {Number} n
 	@return {Ammo.btSoftBody}
 */
 Ammo.btSoftBodyArray.prototype.at = function(n) {
@@ -5427,28 +5335,28 @@ Ammo.btSoftBodyArray.prototype.at = function(n) {
 /**
 	@constructor
 	@implements Ammo.btDiscreteDynamicsWorld
-	@param dispatcher {Ammo.btDispatcher}
-	@param pairCache {Ammo.btBroadphaseInterface}
-	@param constraintSolver {Ammo.btConstraintSolver}
-	@param collisionConfiguration {Ammo.btCollisionConfiguration}
-	@param softBodySolver {Ammo.btSoftBodySolver}
+	@param {Ammo.btDispatcher} dispatcher
+	@param {Ammo.btBroadphaseInterface} pairCache
+	@param {Ammo.btConstraintSolver} constraintSolver
+	@param {Ammo.btCollisionConfiguration} collisionConfiguration
+	@param {Ammo.btSoftBodySolver} softBodySolver
 */
 Ammo.btSoftRigidDynamicsWorld = function(dispatcher, pairCache, constraintSolver, collisionConfiguration, softBodySolver) {};
 /**
 	@function
-	@param body {Ammo.btSoftBody}
-	@param collisionFilterGroup {Number}
-	@param collisionFilterMask {Number}
+	@param {Ammo.btSoftBody} body
+	@param {Number} collisionFilterGroup
+	@param {Number} collisionFilterMask
 */
 Ammo.btSoftRigidDynamicsWorld.prototype.addSoftBody = function(body, collisionFilterGroup, collisionFilterMask) {};
 /**
 	@function
-	@param body {Ammo.btSoftBody}
+	@param {Ammo.btSoftBody} body
 */
 Ammo.btSoftRigidDynamicsWorld.prototype.removeSoftBody = function(body) {};
 /**
 	@function
-	@param collisionObject {Ammo.btCollisionObject}
+	@param {Ammo.btCollisionObject} collisionObject
 */
 Ammo.btSoftRigidDynamicsWorld.prototype.removeCollisionObject = function(collisionObject) {};
 /**
@@ -5468,15 +5376,15 @@ Ammo.btSoftRigidDynamicsWorld.prototype.getSoftBodyArray = function() {
 /**
 	@constructor
 	@implements Ammo.btDiscreteDynamicsWorld
-	@param dispatcher {Ammo.btDispatcher}
-	@param pairCache {Ammo.btBroadphaseInterface}
-	@param constraintSolver {Ammo.btConstraintSolver}
-	@param collisionConfiguration {Ammo.btCollisionConfiguration}
+	@param {Ammo.btDispatcher} dispatcher
+	@param {Ammo.btBroadphaseInterface} pairCache
+	@param {Ammo.btConstraintSolver} constraintSolver
+	@param {Ammo.btCollisionConfiguration} collisionConfiguration
 */
 Ammo.btSoftRigidDynamicsWorld = function(dispatcher, pairCache, constraintSolver, collisionConfiguration) {};
 /**
 	@function
-	@param gravity {Ammo.btVector3}
+	@param {Ammo.btVector3} gravity
 */
 Ammo.btSoftRigidDynamicsWorld.prototype.setGravity = function(gravity) {};
 /**
@@ -5488,37 +5396,32 @@ Ammo.btSoftRigidDynamicsWorld.prototype.getGravity = function() {
 };
 /**
 	@function
-	@param body {Ammo.btRigidBody}
-*/
-Ammo.btSoftRigidDynamicsWorld.prototype.addRigidBody = function(body) {};
-/**
-	@function
-	@param body {Ammo.btRigidBody}
-	@param group {Number}
-	@param mask {Number}
+	@param {Ammo.btRigidBody} [body]
+	@param {Number} [group]
+	@param {Number} [mask]
 */
 Ammo.btSoftRigidDynamicsWorld.prototype.addRigidBody = function(body, group, mask) {};
 /**
 	@function
-	@param body {Ammo.btRigidBody}
+	@param {Ammo.btRigidBody} body
 */
 Ammo.btSoftRigidDynamicsWorld.prototype.removeRigidBody = function(body) {};
 /**
 	@function
-	@param constraint {Ammo.btTypedConstraint}
-	@param [disableCollisionsBetweenLinkedBodies] {Boolean}
+	@param {Ammo.btTypedConstraint} constraint
+	@param {Boolean} [disableCollisionsBetweenLinkedBodies]
 */
 Ammo.btSoftRigidDynamicsWorld.prototype.addConstraint = function(constraint, disableCollisionsBetweenLinkedBodies) {};
 /**
 	@function
-	@param constraint {Ammo.btTypedConstraint}
+	@param {Ammo.btTypedConstraint} constraint
 */
 Ammo.btSoftRigidDynamicsWorld.prototype.removeConstraint = function(constraint) {};
 /**
 	@function
-	@param timeStep {Number}
-	@param [maxSubSteps] {Number}
-	@param [fixedTimeStep] {Number}
+	@param {Number} timeStep
+	@param {Number} [maxSubSteps]
+	@param {Number} [fixedTimeStep]
 	@return {Number}
 */
 Ammo.btSoftRigidDynamicsWorld.prototype.stepSimulation = function(timeStep, maxSubSteps, fixedTimeStep) {
@@ -5526,12 +5429,12 @@ Ammo.btSoftRigidDynamicsWorld.prototype.stepSimulation = function(timeStep, maxS
 };
 /**
 	@function
-	@param action {Ammo.btActionInterface}
+	@param {Ammo.btActionInterface} action
 */
 Ammo.btSoftRigidDynamicsWorld.prototype.addAction = function(action) {};
 /**
 	@function
-	@param action {Ammo.btActionInterface}
+	@param {Ammo.btActionInterface} action
 */
 Ammo.btSoftRigidDynamicsWorld.prototype.removeAction = function(action) {};
 /**
@@ -5550,9 +5453,9 @@ Ammo.btSoftRigidDynamicsWorld.prototype.getDispatcher = function() {
 };
 /**
 	@function
-	@param rayFromWorld {Ammo.btVector3}
-	@param rayToWorld {Ammo.btVector3}
-	@param resultCallback {Ammo.RayResultCallback}
+	@param {Ammo.btVector3} rayFromWorld
+	@param {Ammo.btVector3} rayToWorld
+	@param {Ammo.RayResultCallback} resultCallback
 */
 Ammo.btSoftRigidDynamicsWorld.prototype.rayTest = function(rayFromWorld, rayToWorld, resultCallback) {};
 /**
@@ -5571,9 +5474,9 @@ Ammo.btSoftRigidDynamicsWorld.prototype.getDispatchInfo = function() {
 };
 /**
 	@function
-	@param collisionObject {Ammo.btCollisionObject}
-	@param [collisionFilterGroup] {Number}
-	@param [collisionFilterMask] {Number}
+	@param {Ammo.btCollisionObject} collisionObject
+	@param {Number} [collisionFilterGroup]
+	@param {Number} [collisionFilterMask]
 */
 Ammo.btSoftRigidDynamicsWorld.prototype.addCollisionObject = function(collisionObject, collisionFilterGroup, collisionFilterMask) {};
 /**
@@ -5585,24 +5488,24 @@ Ammo.btSoftRigidDynamicsWorld.prototype.getBroadphase = function() {
 };
 /**
 	@function
-	@param castShape {Ammo.btConvexShape}
-	@param from {Ammo.btTransform}
-	@param to {Ammo.btTransform}
-	@param resultCallback {Ammo.ConvexResultCallback}
-	@param allowedCcdPenetration {Number}
+	@param {Ammo.btConvexShape} castShape
+	@param {Ammo.btTransform} from
+	@param {Ammo.btTransform} to
+	@param {Ammo.ConvexResultCallback} resultCallback
+	@param {Number} allowedCcdPenetration
 */
 Ammo.btSoftRigidDynamicsWorld.prototype.convexSweepTest = function(castShape, from, to, resultCallback, allowedCcdPenetration) {};
 /**
 	@function
-	@param colObjA {Ammo.btCollisionObject}
-	@param colObjB {Ammo.btCollisionObject}
-	@param resultCallback {Ammo.ContactResultCallback}
+	@param {Ammo.btCollisionObject} colObjA
+	@param {Ammo.btCollisionObject} colObjB
+	@param {Ammo.ContactResultCallback} resultCallback
 */
 Ammo.btSoftRigidDynamicsWorld.prototype.contactPairTest = function(colObjA, colObjB, resultCallback) {};
 /**
 	@function
-	@param colObj {Ammo.btCollisionObject}
-	@param resultCallback {Ammo.ContactResultCallback}
+	@param {Ammo.btCollisionObject} colObj
+	@param {Ammo.ContactResultCallback} resultCallback
 */
 Ammo.btSoftRigidDynamicsWorld.prototype.contactTest = function(colObj, resultCallback) {};
 
@@ -5612,11 +5515,11 @@ Ammo.btSoftRigidDynamicsWorld.prototype.contactTest = function(colObj, resultCal
 Ammo.btSoftBodyHelpers = function() {};
 /**
 	@function
-	@param worldInfo {Ammo.btSoftBodyWorldInfo}
-	@param from {Ammo.btVector3}
-	@param to {Ammo.btVector3}
-	@param res {Number}
-	@param fixeds {Number}
+	@param {Ammo.btSoftBodyWorldInfo} worldInfo
+	@param {Ammo.btVector3} from
+	@param {Ammo.btVector3} to
+	@param {Number} res
+	@param {Number} fixeds
 	@return {Ammo.btSoftBody}
 */
 Ammo.btSoftBodyHelpers.prototype.CreateRope = function(worldInfo, from, to, res, fixeds) {
@@ -5624,15 +5527,15 @@ Ammo.btSoftBodyHelpers.prototype.CreateRope = function(worldInfo, from, to, res,
 };
 /**
 	@function
-	@param worldInfo {Ammo.btSoftBodyWorldInfo}
-	@param corner00 {Ammo.btVector3}
-	@param corner10 {Ammo.btVector3}
-	@param corner01 {Ammo.btVector3}
-	@param corner11 {Ammo.btVector3}
-	@param resx {Number}
-	@param resy {Number}
-	@param fixeds {Number}
-	@param gendiags {Boolean}
+	@param {Ammo.btSoftBodyWorldInfo} worldInfo
+	@param {Ammo.btVector3} corner00
+	@param {Ammo.btVector3} corner10
+	@param {Ammo.btVector3} corner01
+	@param {Ammo.btVector3} corner11
+	@param {Number} resx
+	@param {Number} resy
+	@param {Number} fixeds
+	@param {Boolean} gendiags
 	@return {Ammo.btSoftBody}
 */
 Ammo.btSoftBodyHelpers.prototype.CreatePatch = function(worldInfo, corner00, corner10, corner01, corner11, resx, resy, fixeds, gendiags) {
@@ -5640,16 +5543,16 @@ Ammo.btSoftBodyHelpers.prototype.CreatePatch = function(worldInfo, corner00, cor
 };
 /**
 	@function
-	@param worldInfo {Ammo.btSoftBodyWorldInfo}
-	@param corner00 {Ammo.btVector3}
-	@param corner10 {Ammo.btVector3}
-	@param corner01 {Ammo.btVector3}
-	@param corner11 {Ammo.btVector3}
-	@param resx {Number}
-	@param resy {Number}
-	@param fixeds {Number}
-	@param gendiags {Boolean}
-	@param tex_coords {Array<Number>}
+	@param {Ammo.btSoftBodyWorldInfo} worldInfo
+	@param {Ammo.btVector3} corner00
+	@param {Ammo.btVector3} corner10
+	@param {Ammo.btVector3} corner01
+	@param {Ammo.btVector3} corner11
+	@param {Number} resx
+	@param {Number} resy
+	@param {Number} fixeds
+	@param {Boolean} gendiags
+	@param {Array<Number>} tex_coords
 	@return {Ammo.btSoftBody}
 */
 Ammo.btSoftBodyHelpers.prototype.CreatePatchUV = function(worldInfo, corner00, corner10, corner01, corner11, resx, resy, fixeds, gendiags, tex_coords) {
@@ -5657,10 +5560,10 @@ Ammo.btSoftBodyHelpers.prototype.CreatePatchUV = function(worldInfo, corner00, c
 };
 /**
 	@function
-	@param worldInfo {Ammo.btSoftBodyWorldInfo}
-	@param center {Ammo.btVector3}
-	@param radius {Ammo.btVector3}
-	@param res {Number}
+	@param {Ammo.btSoftBodyWorldInfo} worldInfo
+	@param {Ammo.btVector3} center
+	@param {Ammo.btVector3} radius
+	@param {Number} res
 	@return {Ammo.btSoftBody}
 */
 Ammo.btSoftBodyHelpers.prototype.CreateEllipsoid = function(worldInfo, center, radius, res) {
@@ -5668,11 +5571,11 @@ Ammo.btSoftBodyHelpers.prototype.CreateEllipsoid = function(worldInfo, center, r
 };
 /**
 	@function
-	@param worldInfo {Ammo.btSoftBodyWorldInfo}
-	@param vertices {Array<Number>}
-	@param triangles {Array<Number>}
-	@param ntriangles {Number}
-	@param randomizeConstraints {Boolean}
+	@param {Ammo.btSoftBodyWorldInfo} worldInfo
+	@param {Array<Number>} vertices
+	@param {Array<Number>} triangles
+	@param {Number} ntriangles
+	@param {Boolean} randomizeConstraints
 	@return {Ammo.btSoftBody}
 */
 Ammo.btSoftBodyHelpers.prototype.CreateFromTriMesh = function(worldInfo, vertices, triangles, ntriangles, randomizeConstraints) {
@@ -5680,10 +5583,10 @@ Ammo.btSoftBodyHelpers.prototype.CreateFromTriMesh = function(worldInfo, vertice
 };
 /**
 	@function
-	@param worldInfo {Ammo.btSoftBodyWorldInfo}
-	@param vertices {Ammo.btVector3}
-	@param nvertices {Number}
-	@param randomizeConstraints {Boolean}
+	@param {Ammo.btSoftBodyWorldInfo} worldInfo
+	@param {Ammo.btVector3} vertices
+	@param {Number} nvertices
+	@param {Boolean} randomizeConstraints
 	@return {Ammo.btSoftBody}
 */
 Ammo.btSoftBodyHelpers.prototype.CreateFromConvexHull = function(worldInfo, vertices, nvertices, randomizeConstraints) {

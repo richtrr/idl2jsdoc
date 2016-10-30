@@ -43,6 +43,7 @@ function linked(node) {
             if(it.implements){
                 copyImplements(it.implements, it);
             }
+            deleteOverlaps(it);
         }
     }
 }
@@ -55,6 +56,43 @@ function checkImplements(it, target) {
         }
     }
     return false;
+}
+
+function deleteOverlaps(it) {
+    var indesies=[];
+    for (var i = 0; i < it.children.length; i++) {
+        if(indesies.indexOf(i)<0) {
+            var a = it.children[i];
+            if (a.entity == CONSTRUCTOR || a.entity == METHOD) {
+                for (var j = i + 1; j < it.children.length; j++) {
+                    if(indesies.indexOf(j)<0) {
+                        var b = it.children[j];
+                        if ((b.entity == CONSTRUCTOR || b.entity == METHOD) && a.name == b.name) {
+                            if (a.children.length >= b.children.length) {
+                                indesies.push(j);
+                                if (a.children.length > b.children.length) {
+                                    for (var u = b.children.length - 1; u < a.children.length; u++)
+                                        if(a.children[u])
+                                            a.children[u].isOptional = true;
+                                }
+                            }
+                            else {
+                                indesies.push(i);
+                                if (a.children.length < b.children.length) {
+                                    for (var u = a.children.length - 1; u < b.children.length; u++)
+                                        if(b.children[u])
+                                            b.children[u].isOptional = true;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    for (var k = 0; k < indesies.length; k++) {
+        it.children.splice(indesies[k], 1);
+    }
 }
 function copyImplements(it, target) {
     for (var i = 0; i < it.children.length; i++) {
@@ -83,6 +121,8 @@ function generateInterface(it) {
     code += '*!/\n\n';*/
 
     // implement
+
+    // todo remove ovearlap functions and constructors
 
     for (var i = 0; i < it.children.length; i++) {
         var node = it.children[i];
@@ -218,7 +258,7 @@ function generateArgumentDescription(it) {
         name = it.name;
     }
 
-    desc += name + ' ' + generateTypeDesc(it);
+    desc += generateTypeDesc(it) + ' '+name;
 
     return {
         desc: desc,
