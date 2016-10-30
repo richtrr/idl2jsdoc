@@ -1,4 +1,13 @@
-/** (c) 2016 Igor Rybkin richtrr@ya.ru. */
+
+var ERROR			= 'error'	    ;
+var IDENTIFIER		= 'identifier'	;
+var SPACE			= 'space'		;
+var EOL				= 'eol'			;
+var COMMENT			= 'comment'		;
+var OPPERATOR		= 'opperator'	;
+var REGEXP			= 'regexp'		;
+var STRING			= 'string'		;
+var NUMBER      	= 'number'		;
 
 function scan(s) {
     var tokens = [];
@@ -11,13 +20,13 @@ function scan(s) {
     for (i = 0; i < source.length; i++) {
         if (next) {
             token = next;
-            next = read(source, next.IndexEnd + 1, token);
-            if (token.Type != Token.SPACE) {
+            next = read(source, next.indexEnd + 1, token);
+            if (token.type != SPACE) {
                 last = token;
                 tokens.push(token);
             }
             else next = null;
-            i = token.IndexEnd;
+            i = token.indexEnd;
         }
         else {
             next = read(source, i, last);
@@ -35,14 +44,19 @@ function read(s, read_start, last) {
 
     var is_spacer = !is_separator && SPACER[code];
     var i = read_start;
-    var token = new Token();
-    token.IndexStart = read_start;
+    var token = {
+        indexStart	: null,
+        indexEnd	: null,
+        type		: null,
+        content	    : null
+    };
+    token.indexStart = read_start;
 
     // numbers parse
     // todo 0x detect, 0.0f
 
     var sec = s.charAt(read_start + 1);
-    var is_num = '0123456789'.indexOf(char) >= 0 || (char == '.' && '0123456789'.indexOf(sec) >= 0);
+    var is_num = ID_DIGITS.indexOf(char) >= 0 || (char == '.' && ID_DIGITS.indexOf(sec) >= 0);
     if (is_num) is_separator = false;
     var prev;
     for (i; i < s.length; i++) {
@@ -55,20 +69,20 @@ function read(s, read_start, last) {
             }
             else {
                 var num = Number(d);
-                if (!isNaN(num) && '.0123456789'.indexOf(d.charAt(0)) >= 0) {
-                    token.Type = Token.NUMBER;
-                    token.Content = num;
+                if (!isNaN(num) && ID_DIGITS_FIRST.indexOf(d.charAt(0)) >= 0) {
+                    token.type = NUMBER;
+                    token.content = num;
                 }
                 else {
-                    token.Type = Token.ERROR;
-                    token.Content = d;
+                    token.type = ERROR;
+                    token.content = d;
                 }
                 break;
             }
         }
         else {
             if (is_spacer) {
-                token.Type = Token.SPACE;
+                token.type = SPACE;
                 if (!SPACER[code])
                     break;
             }
@@ -84,7 +98,7 @@ function read(s, read_start, last) {
                     if (SEPARATOR[code]) {
                         if (d.length == 0 && EOLS[code]) {
                             i += 1;
-                            token.Type = Token.EOL;
+                            token.type = EOL;
                             break;
                         }
 
@@ -112,10 +126,10 @@ function read(s, read_start, last) {
         }
     }
 
-    token.IndexEnd = i - 1;
+    token.indexEnd = i - 1;
 
-    if (token.Type == null) {
-        token.Content = d;
+    if (token.type == null) {
+        token.content = d;
         if (is_separator)
             readDivide(s, token, last);
         else readText(s, token);
@@ -133,64 +147,64 @@ function readToEOL(s, token) {
 }
 function readRegExp(s, token) {
     const flags = 'gimyu';
-    var i = s.indexOf('/', token.IndexEnd + 1);
+    var i = s.indexOf('/', token.indexEnd + 1);
     if (i < 0) return false;
-    token.IndexEnd = i;
+    token.indexEnd = i;
 
     if (s.charAt(i - 1) == '\\')
         return readRegExp(s, token);
 
-    var ex = s.substring(token.IndexStart + 1, token.IndexEnd);
+    var ex = s.substring(token.indexStart + 1, token.indexEnd);
     var p = '';
     var char;
     for (i; i < s.length; i++) {
         char = s.charAt(i + 1)
         if (flags.indexOf(char) >= 0) {
             p += char;
-            token.IndexEnd++;
+            token.indexEnd++;
         }
         else break;
     }
-    token.Content = new RegExp(ex, p);
+    token.content = new RegExp(ex, p);
     return true;
 }
 function readToRight(s, token, r) {
-    var i = s.indexOf(r, token.IndexEnd + 1);
+    var i = s.indexOf(r, token.indexEnd + 1);
     if (i < 0) return false;
-    token.IndexEnd = i + r.length;
-    token.Content = s.substring(token.IndexStart + token.Content.length, token.IndexEnd - r.length);
-    token.IndexEnd--;
+    token.indexEnd = i + r.length;
+    token.content = s.substring(token.indexStart + token.content.length, token.indexEnd - r.length);
+    token.indexEnd--;
     return true;
 }
 function readText(s, token) {
-    if (OPPERATORS.indexOf(token.Content) >= 0) {
-        token.Type = Token.OPPERATOR;
+    if (OPPERATORS.indexOf(token.content) >= 0) {
+        token.type = OPPERATOR;
     }
     else {
-        if (id_char_first.indexOf(token.Content.charAt(0)) >= 0) {
-            token.Type = Token.IDENTIFIER;
-            for (var i = 1; i < token.Content.length; i++)
-                if (id_char.indexOf(token.Content.charAt(i)) < 0) {
-                    token.Type = Token.ERROR;
+        if (ID_CHAR_FIRST.indexOf(token.content.charAt(0)) >= 0) {
+            token.type = IDENTIFIER;
+            for (var i = 1; i < token.content.length; i++)
+                if (ID_CHAR.indexOf(token.content.charAt(i)) < 0) {
+                    token.type = ERROR;
                     break;
                 }
         }
         else {
-            token.Type = Token.ERROR;
+            token.type = ERROR;
         }
     }
 }
 function readDivOrReg(s, token, last) {
     var res = false;
 
-    var b = after_may.indexOf(last.Content) >= 0;
+    var b = AFTER_MAY.indexOf(last.content) >= 0;
     if (!b) {
         var c;
-        for (var i = last.IndexStart; i > 0; i--) {
+        for (var i = last.indexStart; i > 0; i--) {
             c = s.substring(i, i + 1);
             var code = s.substring(i, i + 1).charCodeAt();
             if (!(EOLS[code] || SPACER[code])) {
-                b = after_may.indexOf(c) >= 0;
+                b = AFTER_MAY.indexOf(c) >= 0;
                 break;
             }
         }
@@ -198,14 +212,14 @@ function readDivOrReg(s, token, last) {
 
     if (b) {
         res = readRegExp(s, token);
-        token.Type = Token.REGEXP;
+        token.type = REGEXP;
         if (!res) {
-            token.Type = Token.OPPERATOR;
+            token.type = OPPERATOR;
             res = true;
         }
     }
     else {
-        token.Type = Token.OPPERATOR;
+        token.type = OPPERATOR;
         res = true;
     }
 
@@ -214,33 +228,33 @@ function readDivOrReg(s, token, last) {
 function readDivide(s, token, last) {
 
     var res = false;
-    switch (String(token.Content)) {
+    switch (String(token.content)) {
         case '//':
             res = readToEOL(s, token);
-            token.Type = Token.COMMENT;
+            token.type = COMMENT;
             break;
         case '/*':
             res = readToRight(s, token, '*/');
-            token.Type = Token.COMMENT;
+            token.type = COMMENT;
             break;
         case '"':
             res = readToRight(s, token, '"');
-            token.Type = Token.STRING;
+            token.type = STRING;
             break;
         case "'":
             res = readToRight(s, token, "'");
-            token.Type = Token.STRING;
+            token.type = STRING;
             break;
         case '/':
             res = readDivOrReg(s, token, last);
             break;
         default:
-            res = (OPPERATORS.indexOf(String(token.Content)) >= 0);
+            res = (OPPERATORS.indexOf(String(token.content)) >= 0);
             if (res)
-                token.Type = Token.OPPERATOR;
+                token.type = OPPERATOR;
     }
     if (!res)
-        token.Type = Token.ERROR;
+        token.type = ERROR;
 }
 function toString(tokens) {
     var i;
@@ -248,29 +262,11 @@ function toString(tokens) {
     var s = '';
     for (i = 0; i < tokens.length; i++) {
         token = tokens[i];
-        var t = ('<' + token.Type + '>') + (token.Content ? '<' + token.Content + '>' : '');
+        var t = ('<' + token.type + '>') + (token.content ? '<' + token.content + '>' : '');
         s += '\n' + t;
     }
     return s;
 }
-
-function Token() {
-    this.IndexStart	= null;
-    this.IndexEnd	= null;
-    this.Type		= null;
-    this.Content	= null;
-}
-
-Token.ERROR				= 'ERROR'	    ;
-Token.IDENTIFIER		= 'IDENTIFIER'	;
-Token.SPACE				= 'SPACE'		;
-Token.EOL				= 'EOL'			;
-Token.COMMENT			= 'COMMENT'		;
-Token.OPPERATOR			= 'OPPERATOR'	;
-Token.TYPE				= 'TYPE'		;
-Token.REGEXP			= 'REGEXP'		;
-Token.STRING			= 'STRING'		;
-Token.NUMBER      		= 'NUMBER'		;
 
 var OPPERATORS = [
     '{',
@@ -305,21 +301,15 @@ var OPPERATORS = [
     '/*',
     '*/'
 ];
-
 var EOLS = [];
 var SPACER = [];
 var SEPARATOR = [];
 var JOINT = [];
-
-const JOINT_STRING = '/*<>=^|&+-!';
-const EOLS_STRING = '\u000A\u000D\u2028\u2029';
-const SPACERS_STRING = '\u0009\u000B\u000C\u0020\u00A0\uFEFF';
-const SEPARATORS_STRING = '!~%^&*()+-=|[]{};:,.<>/?"' + "'" + '\u000A\u000D\u2028\u2029';
-
-const id_char_first = '_$ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-const id_char = '_$ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-
-const after_may = [
+var ID_CHAR_FIRST = '_$ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+var ID_DIGITS = '0123456789';
+var ID_DIGITS_FIRST = '.'+ID_DIGITS;
+var ID_CHAR = ID_CHAR_FIRST+ID_DIGITS;
+var AFTER_MAY = [
     '{', '(', '[', '=', '?', ':', ';',
     '<', '>', '/', '+', '-', '*', '%',
     '&', '|', '^', '!', '~', ','];
@@ -329,14 +319,10 @@ function insertCodeChars(a, s) {
         a[s.charCodeAt(i)] = s.charAt(i);
 }
 
-insertCodeChars(EOLS, EOLS_STRING);
-insertCodeChars(JOINT, JOINT_STRING);
-insertCodeChars(SPACER, SPACERS_STRING);
-insertCodeChars(SEPARATOR, SEPARATORS_STRING);
+insertCodeChars(EOLS, '\u000A\u000D\u2028\u2029');
+insertCodeChars(JOINT, '/*<>=^|&+-!');
+insertCodeChars(SPACER, '\u0009\u000B\u000C\u0020\u00A0\uFEFF');
+insertCodeChars(SEPARATOR, '!~%^&*()+-=|[]{};:,.<>/?"' + "'" + '\u000A\u000D\u2028\u2029');
 
-var Scanner={};
-Scanner.scan = scan;
-Scanner.toString = toString;
-
-module.exports.Scanner = Scanner;
-module.exports.Token = Token;
+module.exports.scan = scan;
+module.exports.toString = toString;
